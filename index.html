@@ -608,85 +608,16 @@ function animateCart() {
   let cart = [];
 
   // === تحميل المنتجات من Google Sheets ===
-  fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec")
-    .then(res => res.json())
-    .then(data => {
-      PRODUCTS = data;
-      renderProducts(PRODUCTS);
-    })
-    .catch(err => {
-      console.error("خطأ في جلب المنتجات:", err);
-    });
-
-  // === دالة عرض المنتجات ===
-  function renderProducts(products) {
-    const container = document.getElementById('products');
-    container.innerHTML = "";
-    products.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'product';
-      div.innerHTML = `
-        <img src="${p.image}" alt="${p.title}">
-        <h3>${p.title}</h3>
-        <p>${p.description}</p>
-        <p>السعر: ${p.price} دينار</p>
-        <p>المخزون: <span id="stock-${p.id}">${p.stock}</span></p>
-        <button onclick="addToCart('${p.id}')">إضافة للسلة</button>
-      `;
-      container.appendChild(div);
-    });
-  }
-
-  // === إضافة للسلة ===
-  function addToCart(id) {
-    const product = PRODUCTS.find(p => p.id === id);
-    if (!product || product.stock <= 0) {
-      alert("نفدت الكمية من هذا المنتج");
-      return;
-    }
-    cart.push({ id: product.id, title: product.title, qty: 1 });
-    updateCart();
-  }
-
-  // === تحديث السلة ===
-  function updateCart() {
-    const cartList = document.getElementById('cartItems');
-    cartList.innerHTML = "";
-    cart.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = `${item.title} - الكمية: ${item.qty}`;
-      cartList.appendChild(li);
-    });
-  }
-
-  // === عند إتمام الشراء ===
-  document.getElementById('confirmCheckoutBtn').addEventListener('click', () => {
-    if (cart.length === 0) {
-      alert("السلة فارغة");
-      return;
-    }
-
-    // خصم المخزون محليًا + تحديث Google Sheets
-    cart.forEach(item => {
-      const product = PRODUCTS.find(p => p.id === item.id);
-      if (product) {
-        product.stock -= item.qty;
-        document.getElementById(`stock-${product.id}`).textContent = product.stock;
-
-        // إرسال تحديث لـ Google Sheets
-        fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec", {
-          method: "POST",
-          body: JSON.stringify({ id: item.id, qty: item.qty }),
-          headers: { "Content-Type": "application/json" }
-        });
-      }
-    });
-
-    alert("تم تأكيد طلبك ✅");
-    cart = [];
-    updateCart();
+fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec")
+  .then(res => res.json())
+  .then(data => {
+    PRODUCTS = data;
+    renderProducts(PRODUCTS);
+  })
+  .catch(err => {
+    console.error("خطأ في جلب المنتجات:", err);
   });
-</script>
+
 
     
 
