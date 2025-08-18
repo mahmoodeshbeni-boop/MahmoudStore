@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
-
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>متجر محمود | Mahmoud Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com">
 // Animation for cart button
 function animateCart() {
@@ -199,7 +197,6 @@ function animateCart() {
 <div class="grid gap-3">
 <input class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerName" placeholder="الاسم الكامل"/>
 <input class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerPhone" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="رقم الهاتف"/>
-<!-- بدل input العنوان بهذا select -->
 <select class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerRegion">
 <option value="">اختر المنطقة</option>
 <option data-fee="15" value="طرابلس">طرابلس — 15 LYD</option>
@@ -595,121 +592,106 @@ function animateCart() {
 </div>
 </div>
 </div>
+
 <script>
-    // === إعدادات ===
-    const WHATSAPP_NUMBER = '218913077275'; // ضع رقم واتسابك بدون + وبصيغة دولية ليبيا 218
+    // === إعدادات ثابتة ===
+    const WHATSAPP_NUMBER = '218913077275'; // ضع رقم واتسابك بدون +
     const CURRENCY = 'دينار ليبي';
-
-    // === بيانات المنتجات (٣ منتجات) ===
-    
-// === تحميل المنتجات من Google Sheets ===
-<script>
-  let PRODUCTS = [];
-  let cart = [];
-
-  // === تحميل المنتجات من Google Sheets ===
-fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec")
-  .then(res => res.json())
-  .then(data => {
-    PRODUCTS = data;
-    renderProducts(PRODUCTS);
-  })
-  .catch(err => {
-    console.error("خطأ في جلب المنتجات:", err);
-  });
-
-
-    
+    const SHEET_API = 'https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec';
 
     // === حالة التطبيق ===
+    let PRODUCTS = [];
     let cart = [];
 
-    // === بناء كروت المنتجات ===
     const grid = document.getElementById('productsGrid');
     const searchInput = document.getElementById('searchInput');
 
-    
-function renderProducts(list) {
-  grid.innerHTML = '';
-  list.forEach(prod => {
-    const card = document.createElement('div');
-    card.className = 'rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden flex flex-col';
-    card.innerHTML = `
-      <div class="aspect-[4/3] overflow-hidden">
-        <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5 flex-1 flex flex-col gap-3">
-        <h3 class="text-lg font-semibold">${prod.title}</h3>
-        <p class="text-slate-300 text-sm">${prod.description}</p>
-        <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
-          المتوفر: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
-        </p>
-        <div class="mt-auto flex items-center justify-between">
-          <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
-          <div class="flex items-center gap-2">
-            <input type="number" min="1" max="${prod.stock}" value="1"
-              class="qty w-20 px-3 py-2 text-sm rounded-xl bg-white/10 ring-1 ring-white/10"
-              ${prod.stock === 0 ? "disabled" : ""}>
-            <button data-id="${prod.id}"
-              class="addToCart px-4 py-2 rounded-xl transition ${prod.stock === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-brand hover:bg-brand/90'}"
-              ${prod.stock === 0 ? 'disabled' : ''}>
-              ${prod.stock > 0 ? 'إضافة' : 'نفد'}
-            </button>
+    // === تحميل المنتجات من Google Sheets ===
+    async function loadProducts() {
+      try {
+        const res = await fetch(SHEET_API, { cache: 'no-store' });
+        const data = await res.json();
+        // تأكد من الأشكال وتحويل price/stock للأرقام
+        PRODUCTS = (Array.isArray(data) ? data : []).map(p => ({
+          id: String(p.id),
+          title: p.title || '',
+          description: p.description || '',
+          image: p.image || '',
+          price: Number(p.price) || 0,
+          stock: Number(p.stock) || 0
+        }));
+        renderProducts(PRODUCTS);
+      } catch (err) {
+        console.error('فشل جلب المنتجات من Google Sheets:', err);
+        grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">تعذر تحميل المنتجات من Google Sheets</div>';
+      }
+    }
+
+    // === بناء كروت المنتجات ===
+    function renderProducts(list) {
+      grid.innerHTML = '';
+      list.forEach(prod => {
+        const card = document.createElement('div');
+        card.className = 'rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden flex flex-col';
+        card.innerHTML = `
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover">
           </div>
-        </div>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
+          <div class="p-5 flex-1 flex flex-col gap-3">
+            <h3 class="text-lg font-semibold">${prod.title}</h3>
+            <p class="text-slate-300 text-sm">${prod.description}</p>
+            <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
+              المتوفر: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
+              <div class="flex items-center gap-2">
+                <input type="number" min="1" max="${prod.stock}" value="1"
+                  class="qty w-20 px-3 py-2 text-sm rounded-xl bg-white/10 ring-1 ring-white/10"
+                  ${prod.stock === 0 ? "disabled" : ""}>
+                <button data-id="${prod.id}"
+                  class="addToCart px-4 py-2 rounded-xl transition ${prod.stock === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-brand hover:bg-brand/90'}"
+                  ${prod.stock === 0 ? 'disabled' : ''}>
+                  ${prod.stock > 0 ? 'إضافة' : 'نفد'}
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
 
-  // ربط أزرار الإضافة بعد رسم البطاقات
-  document.querySelectorAll('.addToCart').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const id = e.currentTarget.getAttribute('data-id');
-      const cardEl = e.currentTarget.closest('.rounded-3xl');
-      const qtyEl = cardEl ? cardEl.querySelector('.qty') : null;
-      let qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
-      if (isNaN(qty) || qty < 1) qty = 1;
+      // ربط أزرار الإضافة بعد الرسم
+      document.querySelectorAll('.addToCart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-id');
+          const cardEl = e.currentTarget.closest('.rounded-3xl');
+          const qtyEl = cardEl ? cardEl.querySelector('.qty') : null;
+          let qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
+          if (isNaN(qty) || qty < 1) qty = 1;
 
-      const product = PRODUCTS.find(p => String(p.id) === String(id));
-      if (!product) return;
+          const product = PRODUCTS.find(p => String(p.id) === String(id));
+          if (!product) return;
 
-      if (qty > product.stock) {
-        alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
-        if (qtyEl) qtyEl.value = product.stock > 0 ? product.stock : 1;
-        return;
-      }
+          if (qty > product.stock) {
+            alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
+            if (qtyEl) qtyEl.value = product.stock > 0 ? product.stock : 1;
+            return;
+          }
 
-      addToCart(product.id, qty);
-      showToast(`تمت إضافة ${qty} × ${product.title} إلى السلة`);
-      animateCart();
-      animateCart();
-      const cartBtn = document.getElementById("cartBtn");
-      if (cartBtn) {
-        cartBtn.classList.add("cart-animate");
-        setTimeout(() => cartBtn.classList.remove("cart-animate"), 400);
-      }
-    });
-  });
-}
+          addToCart(product.id, qty);
+          showToast(`تمت إضافة ${qty} × ${product.title} إلى السلة`);
+          animateCart();
+          const cartBtn = document.getElementById("cartBtn");
+          if (cartBtn) {
+            cartBtn.classList.add("cart-animate");
+            setTimeout(() => cartBtn.classList.remove("cart-animate"), 400);
+          }
+        });
+      });
+    }
 
-
-    
-function showToast(message) {
-  const container = document.getElementById('toast-container');
-  const toast = document.createElement('div');
-  toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
-  toast.innerHTML = `✅ ${message}`;
-  container.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add("opacity-0", "transition-opacity");
-    setTimeout(() => toast.remove(), 500);
-  }, 3000);
-}
-
-renderProducts(PRODUCTS);
-
-    // بحث بسيط
+    // بحث
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         const q = e.target.value.trim();
@@ -805,7 +787,6 @@ renderProducts(PRODUCTS);
       const count = cart.reduce((s,i)=>s+i.qty,0);
       cartCount.textContent = count;
       cartTotal.textContent = `${calcTotal().toFixed(2)} ${CURRENCY}`;
-      // تمت إزالة الفتح التلقائي للسلة
     }
 
     function openCart() {
@@ -841,13 +822,39 @@ renderProducts(PRODUCTS);
       openCheckout();
     });
 
-    confirmCheckoutBtn.addEventListener('click', () => {
+    async function updateSheetStock(items){
+      // يرسل خصم الكمية لكل منتج إلى Google Apps Script
+      for (const item of items) {
+        try {
+          await fetch(SHEET_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: item.id, qty: item.qty })
+          });
+        } catch (e) {
+          console.warn('فشل تحديث مخزون المنتج في Google Sheets:', item.id, e);
+        }
+      }
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
+      toast.innerHTML = `✅ ${message}`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "transition-opacity");
+        setTimeout(() => toast.remove(), 500);
+      }, 3000);
+    }
+
+    confirmCheckoutBtn.addEventListener('click', async () => {
       const name = document.getElementById('customerName').value.trim();
       const phone = document.getElementById('customerPhone').value.trim();
-const regionSelect = document.getElementById('customerRegion');
-const region = regionSelect.options[regionSelect.selectedIndex].value;
-const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].dataset.fee || 0);
-
+      const regionSelect = document.getElementById('customerRegion');
+      const region = regionSelect.options[regionSelect.selectedIndex].value;
+      const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].dataset.fee || 0);
       const notes = document.getElementById('customerNotes').value.trim();
 
       const orderLines = cart.map(i => {
@@ -855,11 +862,10 @@ const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].
         return `• ${p.title} × ${i.qty} = ${(p.price * i.qty).toFixed(2)} ${CURRENCY}`;
       }).join('\n');
 
-const subtotal = calcTotal();
-const finalTotal = (subtotal + deliveryFee).toFixed(2);
+      const subtotal = calcTotal();
+      const finalTotal = (subtotal + deliveryFee).toFixed(2);
 
-
-const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
+      const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
 %0A+ رسوم التوصيل (${region}): ${deliveryFee} ${CURRENCY}
 %0A--------------------------------
 %0Aالمجموع الكلي: ${finalTotal} ${CURRENCY}
@@ -870,53 +876,22 @@ const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
       window.open(waUrl, '_blank');
 
-      // تحديث المخزون بعد الطلب
+      // خصم محلي + تحديث Google Sheets
+      const itemsToUpdate = cart.map(c => ({...c})); // نسخة
       cart.forEach(item => {
         const product = PRODUCTS.find(p => p.id === item.id);
-        if (product) {
-          product.stock -= item.qty;
-        }
+        if (product) product.stock -= item.qty;
       });
-      // تحديث المخزون في Google Sheets
-cart.forEach(item => {
-  fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec", {
-    method: "POST",
-    body: JSON.stringify({ id: item.id, qty: item.qty }),
-    headers: { "Content-Type": "application/json" }
-  });
-});
-
       cart = [];
       updateCartUI(false);
-      
-function showToast(message) {
-  const container = document.getElementById('toast-container');
-  const toast = document.createElement('div');
-  toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
-  toast.innerHTML = `✅ ${message}`;
-  container.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add("opacity-0", "transition-opacity");
-    setTimeout(() => toast.remove(), 500);
-  }, 3000);
-}
-
-renderProducts(PRODUCTS);
+      renderProducts(PRODUCTS);
       closeCheckout();
       closeCart();
+
+      // إرسال تحديثات المخزون إلى Google Sheets
+      await updateSheetStock(itemsToUpdate);
+      showToast('تم إرسال الطلب وتحديث المخزون');
     });
-
-    // تم تعطيل الفتح التلقائي للسلة عند الضغط على إضافة
-
-// Animation for cart button
-function animateCart() {
-  const cartBtn = document.getElementById("cartBtn");
-  if (cartBtn) {
-    cartBtn.classList.remove("cart-animate"); // reset
-    void cartBtn.offsetWidth; // restart animation
-    cartBtn.classList.add("cart-animate");
-  }
-}
 
 </script>
 <div class="fixed bottom-5 right-5 flex flex-col gap-2 z-50" id="toast-container"></div>
@@ -980,14 +955,14 @@ function animateCart() {
     });
   });
 
-  // Numeric-only enforcement (in case attribute missing)
+  // Numeric-only enforcement
   if(phoneInput){
     phoneInput.addEventListener('input', () => {
       phoneInput.value = phoneInput.value.replace(/[^\d]/g, '').slice(0,10);
     });
   }
 
-  // Capturing listener to block other click handlers when invalid
+  // Capturing validate before submit
   if(confirmBtn){
     confirmBtn.addEventListener('click', function(e){
       const ok = validate();
@@ -997,10 +972,12 @@ function animateCart() {
         if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
         return false;
       }
-      // valid: allow existing handler to proceed (open WhatsApp, etc.)
-    }, true); // use capture to run before other listeners
+    }, true);
   }
 })();
+
+// تحميل المنتجات عند فتح الصفحة
+document.addEventListener('DOMContentLoaded', loadProducts);
 </script>
 </body>
 </html>
