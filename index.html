@@ -602,32 +602,19 @@ function animateCart() {
 
     // === بيانات المنتجات (٣ منتجات) ===
     
-    const PRODUCTS = [
-      {
-        id: 'p1',
-        title: 'مينوكسيديل الامريكي - زيت',
-        price: 125.00,
-        image: 'assets/images/1oil.png',
-        description: 'مينوكسيديل 5% علاج تساقط الشعر وتكثيفه.',
-        stock: 0
-      },
-      {
-        id: 'p2',
-        title: 'مينوكسيديل الامريكي - فوم',
-        price: 150.00,
-        image: 'assets/images/2foam.png',
-        description: 'مينوكسيديل 5% ممتاز للبشرة الحساسة يعالج تساقط الشعر ويكثف الشعر.',
-        stock: 0
-      },
-      {
-        id: 'p3',
-        title: 'ديرما رولر',
-        price: 25.00,
-        image: 'assets/images/3derma.png',
-        description: 'ديرما رولر لتحفيز المنطقه وفتح المسامات.',
-        stock: 0
-      }
-    ];
+// === تحميل المنتجات من Google Sheets ===
+let PRODUCTS = [];
+
+fetch("AKfycbxJsgiwrhoOoUNFCgZgIhVkR_J-Y6-CuIHz9gchzkOMmQ0oeXGAerb70MB858wt8Y10")
+  .then(res => res.json())
+  .then(data => {
+    PRODUCTS = data;
+    renderProducts(PRODUCTS);
+  })
+  .catch(err => {
+    console.error("خطأ في جلب المنتجات:", err);
+  });
+
     
 
     // === حالة التطبيق ===
@@ -886,6 +873,15 @@ const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
           product.stock -= item.qty;
         }
       });
+      // تحديث المخزون في Google Sheets
+cart.forEach(item => {
+  fetch("AKfycbxJsgiwrhoOoUNFCgZgIhVkR_J-Y6-CuIHz9gchzkOMmQ0oeXGAerb70MB858wt8Y10", {
+    method: "POST",
+    body: JSON.stringify({ id: item.id, qty: item.qty }),
+    headers: { "Content-Type": "application/json" }
+  });
+});
+
       cart = [];
       updateCartUI(false);
       
