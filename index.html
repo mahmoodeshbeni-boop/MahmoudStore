@@ -605,7 +605,7 @@ function animateCart() {
 // === تحميل المنتجات من Google Sheets ===
 let PRODUCTS = [];
 
-fetch("AKfycbyyM4L-VRuCpdtknBA8PjfTKjW2BJAIEPLKdB6sLwP4oBuvntYhXZrEV3xUmtvHahKE")
+fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec")
   .then(res => res.json())
   .then(data => {
     PRODUCTS = data;
@@ -875,7 +875,7 @@ const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
       });
       // تحديث المخزون في Google Sheets
 cart.forEach(item => {
-  fetch("AKfycbyyM4L-VRuCpdtknBA8PjfTKjW2BJAIEPLKdB6sLwP4oBuvntYhXZrEV3xUmtvHahKE", {
+  fetch("https://script.google.com/macros/s/AKfycbx0fv3JCyKWZyTvlw8DR5nR-Os-S4-oeVhNWoQ8WifwPJbpxgVARj187OEFIfit-8n6/exec", {
     method: "POST",
     body: JSON.stringify({ id: item.id, qty: item.qty }),
     headers: { "Content-Type": "application/json" }
