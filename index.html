@@ -822,20 +822,27 @@ function animateCart() {
       openCheckout();
     });
 
-    async function updateSheetStock(items){
-      // يرسل خصم الكمية لكل منتج إلى Google Apps Script
-      for (const item of items) {
-        try {
-          await fetch(SHEET_API, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: item.id, qty: item.qty })
-          });
-        } catch (e) {
-          console.warn('فشل تحديث مخزون المنتج في Google Sheets:', item.id, e);
-        }
-      }
+   async function updateSheetStock(productId, qty) {
+  try {
+    const response = await fetch(SHEET_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: productId, qty: qty })
+    });
+
+    const data = await response.json();
+    console.log("✅ API Response:", data);
+
+    if (data.status === "success") {
+      alert(`تم تحديث المخزون: المنتج ${data.id} أصبح ${data.newStock}`);
+    } else {
+      alert("فشل تحديث المخزون: " + data.message);
     }
+  } catch (err) {
+    console.error("❌ خطأ في استدعاء API:", err);
+    alert("فشل الاتصال بالـ API: " + err);
+  }
+}
 
     function showToast(message) {
       const container = document.getElementById('toast-container');
