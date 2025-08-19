@@ -641,7 +641,7 @@ function animateCart() {
             <h3 class="text-lg font-semibold">${prod.title}</h3>
             <p class="text-slate-300 text-sm">${prod.description}</p>
             <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
-              المتوفر: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
+              الكمية: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
             </p>
             <div class="mt-auto flex items-center justify-between">
               <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
