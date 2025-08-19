@@ -896,7 +896,7 @@ function animateCart() {
       closeCart();
 
       // إرسال تحديثات المخزون إلى Google Sheets
-      await updateSheetStock(itemsToUpdate);
+      await updateSheetStock(itemsToUpdate.id, itemsToUpdate.qty);
       showToast('تم إرسال الطلب وتحديث المخزون');
     });
 
