@@ -834,9 +834,9 @@ function animateCart() {
     console.log("✅ API Response:", data);
 
     if (data.status === "success") {
-      alert(`تم تحديث المخزون: المنتج ${data.id} أصبح ${data.newStock}`);
-    } else {
-      alert("فشل تحديث المخزون: " + data.message);
+  console.log(`✅ تم تحديث المخزون: المنتج ${data.id} أصبح ${data.newStock}`);
+} else {
+  console.warn("⚠️ فشل تحديث المخزون:", data.message);
     }
   } catch (err) {
     console.error("❌ خطأ في استدعاء API:", err);
