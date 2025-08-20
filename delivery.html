@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أسعار التوصيل</title>
+  <link href="styles.css" rel="stylesheet"> <!-- يفترض نفس ملف تنسيق الموقع -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white">
+
+  <!-- الهيدر -->
+  <header class="p-4 shadow bg-slate-800">
+    <nav class="flex justify-between items-center max-w-5xl mx-auto">
+      <h1 class="text-xl font-bold">موقعي</h1>
+      <div class="flex gap-6 font-medium">
+        <a href="index.html" class="hover:text-brand">الرئيسية</a>
+        <a href="delivery.html" class="text-brand">أسعار التوصيل</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- المحتوى -->
+  <main class="max-w-3xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-4">أسعار التوصيل</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border border-white/10 rounded-lg overflow-hidden text-right">
+        <thead class="bg-slate-700">
+          <tr>
+            <th class="p-3 text-sm">المنطقة</th>
+            <th class="p-3 text-sm">السعر (LYD)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/10">
+          <tr>
+            <td class="p-3">طرابلس</td>
+            <td class="p-3">15</td>
+          </tr>
+          <tr>
+            <td class="p-3">مصراتة</td>
+            <td class="p-3">20</td>
+          </tr>
+          <tr>
+            <td class="p-3">بنغازي</td>
+            <td class="p-3">25</td>
+          </tr>
+          <tr>
+            <td class="p-3">زليتن</td>
+            <td class="p-3">18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
