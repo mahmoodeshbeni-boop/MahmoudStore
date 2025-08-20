@@ -1,452 +1,0 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>متجر محمود - أسعار التوصيل</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    body { font-family: 'Cairo', sans-serif; }
-  </style>
-</head>
-<body class="bg-slate-900 text-white">
-
-<!-- Header -->
-<header class="fixed top-0 inset-x-0 z-50 bg-slate-900/80 backdrop-blur border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-center h-16">
-      <nav class="flex space-x-8 space-x-reverse items-center">
-        <a href="index.html" class="text-slate-300 hover:text-white transition">المنتجات</a>
-        <a href="index.html#contact" class="text-slate-300 hover:text-white transition">تواصل</a>
-        <a href="delivery.html" class="text-slate-300 hover:text-white transition">أسعار التوصيل</a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<!-- المحتوى -->
-<main class="max-w-6xl mx-auto p-6 mt-20">
-
-  <h2 class="text-2xl font-bold mb-6">أسعار التوصيل حسب المنطقة</h2>
-
-  <!-- مربع البحث -->
-  <div class="mb-4">
-    <input 
-      type="text" 
-      id="searchInput" 
-      placeholder="🔍 ابحث عن المنطقة..."
-      class="w-full md:w-1/2 px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500">
-  </div>
-
-  <!-- جدول -->
-  <div class="overflow-x-auto bg-slate-800 rounded-lg shadow">
-    <table class="min-w-full text-sm text-right" id="deliveryTable">
-      <thead class="bg-slate-700 text-pink-400">
-        <tr>
-          <th class="px-4 py-3">المنطقة</th>
-          <th class="px-4 py-3">سعر التوصيل (LYD)</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-700">
-        <!-- أمثلة فقط (سأدخل لك جميع المناطق هنا) -->
-<tr><td class="px-4 py-2">طرابلس</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">السياحية</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">حي الأندلس</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الظهرة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">زاوية الدهماني</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">النوفليين</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">بن عاشور</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">شارع الجرابة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">شارع الزاوية</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">شارع الجمهورية</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">شارع النصر</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">باب بن غشير</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">قرقارش</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">غوط الشعال</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">السراج</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الدريبي</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">قرجي</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">قدح</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">أبوسليم</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الرياضية</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الفلاح</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">غرغور</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">حي الزهور</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">طريق المطار</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الكيزة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">صلاح الدين</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">خلة الفرجان</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">طريق الشوك</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الفرناج</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الحي الجامعي</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">سيدي المصري</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">راس حسن</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">زناتة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">جامع الصقع</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الهاني</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">عرادة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الحشان</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">سوق الجمعة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">كشلاف</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الغرارات</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">بوستة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">طريق الشط</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">معيتيقة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">11 يونيو</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">السبعة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">طريق المشتل</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">حي دمشق</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">ولي العهد</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">السدرة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">عين زارة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">طريق السور</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">بوابة الجبس</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">غابة النصر</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">شارع الصريم</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">فشلوم</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">المنصورة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">عمر المختار</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الهضبة المشروع</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بنغازي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">راس عبيدة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بوزغيبة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">حي السلام</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">شبنة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">طريق النهر</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الماجوري</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سيدي حسين</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">البركة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الحدائق</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">أرض لملوم</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">السلماني</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الوحيشي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سيدي يونس</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">ارض الحراسة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">طابلينو</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الرحبة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بلعون</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بوهديمة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الليثي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الفويهات</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سوق الفحم</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بوعطني</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">المساكن</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">قاريونس</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الكويفية</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بنينا</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">قنفوذة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سيدي خليفة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الهواري</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الفعكات</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بوهادي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الكيش</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">دقادوستا</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع فينيسيا</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">ثاكنس</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الرجمة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">جردينة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">المقزحة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">بو مريم</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سيدي فرج</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بو دزيرة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الصابري</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">القوارشة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الرويسات - بنغازي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">حي الدولار</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">حي الفاتح</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">شارع دبي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">السيدة عائشة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بوصنيب</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سبها</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">مصراتة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع بنغازي</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع الهلال</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الجامع العالي</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع سناء محيدلي</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع الاذاعة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">المقاوبة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع مالطا</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">جزيرة النهر</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع المطبات</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الشواهدة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الجزيرة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">إقزير</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">كرزاز</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الغيران</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق المطار</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طمينة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الكراريم</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">زاوية المحجوب</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">قصر حمد</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الثقيل</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الجهانات</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الزوابى</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الشراكسة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الكراوده</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">القدارية</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الحيارشة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">السواوة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">بوروية</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">السِكت</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الرعيضات</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">السكيرات</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الهباره</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الملايطة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الزروق</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الرملة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">قرارة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">يدر</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">راس علي</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">المنقوش</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">عباد</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الدافنية</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">زمورة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع بازينة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع سعدون</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">المقاصبة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الصوالح</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">راس السايح</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">راس فريدغ</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">راس التوتة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">شارع الدم</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الخروبة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق رقم 8</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">دائري إقزير</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق البحر</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الرويسات - مصراتة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">زريق</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">السكت</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">المغدر</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">السواطي</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">سور سعود</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">النباك</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">أولاد بعيو</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الزاوية</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">جنزور</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">صرمان</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">صبراتة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">العجيلات</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">زوارة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الجميل</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">رقدالين</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">زلطن</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">تاجوراء</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">القره بوللي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">قصر الاخيار</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الخمس</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">زليتن</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بن جواد</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">بن وليد</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">ترهونة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سرت</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">راس لانوف</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">البريقة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">إجدابيا</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">المرج</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">دريانة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">المدني</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">توكرة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">برسس</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سي بوزيد</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">طلميثة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">تاكنس</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">جردس</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">البنية</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">المليطانية</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">مدور الزيتون</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">البياضة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">بطة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">أبو ترابة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">المرج الوسط</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">البيضاء</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">مراوة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">مسة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الغريقة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">البيضاء الوسط</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سلتونة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">صفصاف</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الحمامة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الحنية</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الوسيطة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">قرنادة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الفايدية</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">شحات</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">طبرق</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">غريان</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الاصابعة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الزنتان</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">جادو</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">نالوت</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">براك الشاطئ</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">هون</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">السواني</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع حي الاندلس</td><td class="px-4 py-2">8</td></tr>
-<tr><td class="px-4 py-2">درنة</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">الفتائح</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">كرسة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">وادي الناقة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">مرتوبة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سي خالد</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">حي القاعدة الجوية</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سيدي عون</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">ام الرزم</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">لاثرون</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">خليج البمبة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">التميمي</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">العزيات</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">رأس التين</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">درنة الوسط</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">قصربن غشير</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">مطرد</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الابيار</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">وادي الربيع</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">القلعة</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">تيجي</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">أوباري</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">مرزق</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">يفرن</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">طرابلس تسليم نسائي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">السياحية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">حي الأندلس</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الظهرة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">زاوية الدهماني</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">النوفليين</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بن عاشور</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">شارع الجرابة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">شارع الزاوية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">شارع الجمهورية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">شارع النصر</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">باب بن غشير</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">قرقارش</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">غوط الشعال</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">السراج</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الدريبي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">قرجي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">قدح</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">أبوسليم</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الرياضية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الفلاح</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">غرغور</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">حي الزهور</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق المطار</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">الهضبة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">صلاح الدين</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">خلة الفرجان</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق الشوك</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الفرناج</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الحي الجامعي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">سيدي المصري</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">راس حسن</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">زناتة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">جامع الصقع</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الهاني</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">عرادة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الحشان</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">سوق الجمعة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">كشلاف</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">الغرارات</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بوستة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">طريق الشط</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">معيتيقة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">11 يونيو</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">السبعة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">طريق المشتل</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">حي دمشق</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">ولي العهد</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">السدرة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">عين زارة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">طريق السور</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بوابة الجبس</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">غابة النصر</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">شارع الصريم</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">غات</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">الرجبان</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">السبيعة</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">القبة</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">ورشفانة الزهراء</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">ورشفانة الساعدية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">ورشفانة العزيزية</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">بنغازي تسليم نسائي</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">مصراتة تسليم نسائي</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع الجرابة</td><td class="px-4 py-2">8</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع بنغازي</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع السراج</td><td class="px-4 py-2">8</td></tr>
-<tr><td class="px-4 py-2">مسلاتة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">تراغن</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">أم الارانب</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">سمنو</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">سوسة</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">الأبرق</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">جالو</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">أوجلة</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">إجخرة</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">تازربو</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">الكفرة</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع مصراتة</td><td class="px-4 py-2">15</td></tr>
-<tr><td class="px-4 py-2">الجوش</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">بدر</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">الرابطة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">الرياينة</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">العوينية</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">الرحيبات</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">أولاد محمود</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">الحرابة</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">كاباو</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">طمزين</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">الحوامد</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">شكشوك</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">تكويت</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">وازن</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">ككلة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">رأس هلال</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">سوكنة</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">ودان</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">زلة</td><td class="px-4 py-2">45</td></tr>
-<tr><td class="px-4 py-2">الجغبوب</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع عين زارة</td><td class="px-4 py-2">8</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع سبها</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">القطرون</td><td class="px-4 py-2">55</td></tr>
-<tr><td class="px-4 py-2">سوبر فانكس طرابلس</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الشويرف</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">أبو قرين</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع البيضاء</td><td class="px-4 py-2">25</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع زوارة</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع سوق الجمعة</td><td class="px-4 py-2">8</td></tr>
-<tr><td class="px-4 py-2">تسليم بفرع اجدابيا</td><td class="px-4 py-2">20</td></tr>
-<tr><td class="px-4 py-2">امساعد</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">البردي</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">بئر الأشهب</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">كمبوت</td><td class="px-4 py-2">50</td></tr>
-<tr><td class="px-4 py-2">مزدة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">أبو كماش</td><td class="px-4 py-2">40</td></tr>
-<tr><td class="px-4 py-2">بوكس HT Mall</td><td class="px-4 py-2">10</td></tr>
-<tr><td class="px-4 py-2">قمينس</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">الطلحية</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">تيكا</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">جروثة</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">المقرون</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">النواقية</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">سلوق</td><td class="px-4 py-2">30</td></tr>
-<tr><td class="px-4 py-2">بئر غنم</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">بئر معمر</td><td class="px-4 py-2">35</td></tr>
-<tr><td class="px-4 py-2">بئر هويسة</td><td class="px-4 py-2">35</td></tr>
-      </tbody>
-    </table>
-  </div>
-</main>
-
-<!-- Script البحث -->
-<script>
-  document.getElementById('searchInput').addEventListener('keyup', function() {
-    let filter = this.value.toLowerCase();
-    let rows = document.querySelectorAll("#deliveryTable tbody tr");
-    rows.forEach(row => {
-      let area = row.cells[0].textContent.toLowerCase();
-      row.style.display = area.includes(filter) ? "" : "none";
-    });
-  });
-</script>
-
-</body>
-</html>
