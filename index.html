@@ -1,2125 +1,0 @@
-<!DOCTYPE html>
-
-
-
-<html dir="rtl" lang="ar">
-
-<head>
-
-<meta charset="utf-8"/>
-
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-<title>متجر محمود | Mahmoud Store</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
- <link rel="icon" type="image/png" href="assets/images/iconsite.png">
-
-<script src="https://cdn.tailwindcss.com">
-
-// Animation for cart button
-
-function animateCart() {
-
- const cartBtn = document.getElementById("cartBtn");
-
- if (cartBtn) {
-
-  cartBtn.classList.remove("cart-animate"); // reset
-
-  void cartBtn.offsetWidth; // restart animation
-
-  cartBtn.classList.add("cart-animate");
-
- }
-
-}
-
-
-
-</script>
-
-<script>
-
-  tailwind.config = {
-
-   theme: {
-
-    extend: {
-
-     fontFamily: { sans: ['Cairo', 'ui-sans-serif', 'system-ui'] },
-
-     colors: {
-
-      brand: { DEFAULT: '#7c3aed', light: '#a78bfa', dark: '#6d28d9' }
-
-     },
-
-     boxShadow: {
-
-      glow: '0 10px 40px rgba(124,58,237,0.25)'
-
-     },
-
-     backgroundImage: {
-
-      'hero-gradient': 'radial-gradient(1200px 600px at 80% -10%, rgba(124,58,237,0.35), transparent 60%), radial-gradient(1000px 500px at -20% 10%, rgba(56,189,248,0.35), transparent 60%)'
-
-     }
-
-    }
-
-   }
-
-  }
-
-  
-
-// Animation for cart button
-
-function animateCart() {
-
- const cartBtn = document.getElementById("cartBtn");
-
- if (cartBtn) {
-
-  cartBtn.classList.remove("cart-animate"); // reset
-
-  void cartBtn.offsetWidth; // restart animation
-
-  cartBtn.classList.add("cart-animate");
-
- }
-
-}
-
-
-
-</script>
-
-<style>
-
-  html, body { height: 100%; }
-
-  ::selection { background: #7c3aed22; }
-
- </style>
-
-<style>
-
- select#customerRegion {
-
-  background-color: rgba(255, 0, 0, 0.1); /* أحمر خفيف */
-
-  border: 1px solid rgba(255, 0, 0, 0.3);
-
-  color: #000; /* النص بالأسود */
-
-  border-radius: 12px;
-
-  padding: 8px 12px;
-
- }
-
- select#customerRegion:focus {
-
-  background-color: rgba(255, 0, 0, 0.2); /* أحمر أوضح عند التركيز */
-
-  outline: none;
-
- }
-
-</style>
-
-<style>
-
-@keyframes cart-bounce {
-
- 0%, 100% { transform: translateY(0); }
-
- 50% { transform: translateY(-5px); }
-
-}
-
-.cart-animate {
-
- animation: cart-bounce 0.4s ease;
-
-}
-
-</style>
-
-<style>
-
-.input-error{ outline: none; box-shadow: 0 0 0 2px rgba(239,68,68,.6); border-color: rgba(239,68,68,1) !important;}
-
-@keyframes subtle-shake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-4px)} 40%{transform:translateX(4px)} 60%{transform:translateX(-3px)} 80%{transform:translateX(3px)}}
-
-.shake-once{ animation: subtle-shake .35s linear 1; }
-
-.error-msg{font-size: .825rem; color: #ef4444; margin-top: .25rem;}
-
-</style>
-
-</head>
-
-<body class="font-sans bg-slate-950 text-slate-50 selection:bg-brand/20">
-
-<!-- Header -->
-
-<header class="sticky top-0 z-30 backdrop-blur bg-slate-950/70 border-b border-white/10">
-
-<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-
-<div class="flex items-center gap-3">
-
-<div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-brand to-cyan-500 shadow-glow"></div>
-
-<span class="text-lg font-semibold">متجر محمود</span>
-
-</div>
-
-<nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-
-<a class="hover:text-white transition" href="#products">المنتجات</a>
-
-<a href="delivery.html" class="hover:text-brand">أسعار التوصيل</a>
-
-<a class="hover:text-white transition" href="aboutus.html">من نحن</a>
-
-</nav>
-
-<button class="relative flex items-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 px-4 py-2 transition" id="cartBtn">
-
-<span class="material">🛒</span>
-
-<span>السلة</span>
-
-<span class="absolute -top-2 -left-2 text-xs bg-brand text-white w-6 h-6 rounded-full grid place-content-center" id="cartCount">0</span>
-
-</button>
-
-</div>
-
-</header>
-
-<!-- Hero -->
-
-<section class="bg-hero-gradient">
-
-<div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-
-<div>
-
-<h1 class="text-3xl md:text-5xl font-bold leading-[1.2]">
-
-     أهلاً بك في <span class="text-transparent bg-clip-text bg-gradient-to-l from-cyan-400 to-brand">متجر محمود</span>
-
-</h1>
-
-<p class="mt-4 text-slate-300 md:text-lg">تسوق منتجاتنا المختارة بجودة عالية وخدمة توصيل سريعة داخل ليبيا.</p>
-
-<div class="mt-6 flex items-center gap-3">
-
-<a class="px-5 py-3 rounded-2xl bg-brand hover:bg-brand/90 transition shadow-glow" href="#products">تصفح المنتجات</a>
-
-<a class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 transition" href="#contact">تواصل معنا</a>
-
-</div>
-
-</div>
-
-<div class="relative">
-
-<div class="aspect-[4/3] rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-glow overflow-hidden">
-
-<img alt="Hero" class="w-full h-full object-cover" src="assets/images/head.png"/>
-
-</div>
-
-<div class="absolute -bottom-6 -left-6 hidden md:block">
-
-<div class="px-4 py-3 rounded-2xl bg-white/10 ring-1 ring-white/10 backdrop-blur">
-
-<p class="text-sm text-slate-200">🚚 توصيل سريع داخل طرابلس وباقي المدن</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Products -->
-
-<section class="max-w-6xl mx-auto px-4 py-12" id="products">
-
-<div class="flex items-end justify-between mb-6">
-
-<div>
-
-<h2 class="text-2xl md:text-3xl font-bold">منتجاتنا</h2>
-
-<p class="text-slate-300 text-sm md:text-base">اختر الكمية ثم أضف للسلة — الأسعار بالدينار الليبي (LYD)</p>
-
-</div>
-
-<div class="hidden md:block">
-
-<label class="text-sm text-slate-300">بحث: </label>
-
-<input class="px-3 py-2 rounded-xl bg-white/10 focus:bg-white/20 outline-none ring-1 ring-inset ring-white/10" id="searchInput" placeholder="ابحث عن منتج..." type="text"/>
-
-</div>
-
-</div>
-
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productsGrid"></div>
-
-</section>
-
-<!-- About -->
-
-<section class="max-w-6xl mx-auto px-4 pb-16" id="about">
-
-<div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
-
-<h3 class="text-xl font-semibold mb-2">عن المتجر</h3>
-
-<p class="text-slate-300">نوفر منتجات مختارة بعناية مع خدمة عملاء مميزة. يمكنكم الطلب عبر الموقع وإتمام الشراء عبر واتساب بسهولة.</p>
-
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer class="border-t border-white/10" id="contact">
-
-<div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
-
-<div>
-
-<p class="font-semibold">متجرنا</p>
-
-<p class="text-slate-300 text-sm mt-2">طرابلس، ليبيا</p>
-
-</div>
-
-<div>
-
-<p class="font-semibold mb-2">التواصل</p>
-
-<p class="text-slate-300 text-sm">واتساب: <span class="text-white font-mono">+218913077275</span></p>
-
-</div>
-
-<div>
-
-<p class="font-semibold mb-2">روابط سريعة</p>
-
-<div class="flex flex-wrap gap-3 text-sm text-slate-300">
-
-<a class="hover:text-white" href="https://www.tiktok.com/@mahmoud4ads">TIKTOK</a>
-
-<a class="hover:text-white" href="https://www.instagram.com/mahmoud4ads/#">INSTAGRAM</a>
-
-<a class="hover:text-white" href="https://www.facebook.com/mahmoud4ads">FACEBOOK</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="text-center text-xs text-slate-500 pb-8">© 2025 جميع الحقوق محفوظة</div>
-
-</footer>
-
-<!-- Cart Drawer -->
-
-<div class="fixed inset-0 z-40 hidden" id="cartDrawer">
-
-<div class="absolute inset-0 bg-black/50" id="cartOverlay"></div>
-
-<aside class="absolute top-0 right-0 h-full w-full max-w-md bg-slate-900 ring-1 ring-white/10 shadow-2xl p-6 flex flex-col">
-
-<div class="flex items-center justify-between">
-
-<h3 class="text-xl font-semibold">السلة</h3>
-
-<button class="text-slate-300 hover:text-white text-2xl" id="closeCartBtn">×</button>
-
-</div>
-
-<div class="mt-4 flex-1 overflow-auto divide-y divide-white/10" id="cartItems"></div>
-
-<div class="pt-4 space-y-3 border-t border-white/10">
-
-<div class="flex items-center justify-between text-sm">
-
-<span class="text-slate-300">المجموع</span>
-
-<span class="text-lg font-semibold" id="cartTotal">0.00 LYD</span>
-
-</div>
-
-<button class="w-full px-4 py-3 rounded-2xl bg-brand hover:bg-brand/90 transition shadow-glow" id="checkoutBtn">إتمام الطلب عبر واتساب</button>
-
-</div>
-
-</aside>
-
-</div>
-
-<!-- Checkout Modal (collects name/phone/address) -->
-
-<div class="fixed inset-0 z-50 hidden" id="checkoutModal">
-
-<div class="absolute inset-0 bg-black/50"></div>
-
-<div class="absolute inset-0 flex items-center justify-center p-4">
-
-<div class="w-full max-w-lg rounded-2xl bg-slate-900 ring-1 ring-white/10 p-6">
-
-<div class="flex items-center justify-between mb-4">
-
-<h4 class="text-lg font-semibold">بيانات التوصيل             - شركة التوصيل : VANEX</h4>
-
-<button class="text-slate-300 hover:text-white text-2xl" id="closeCheckoutBtn">×</button>
-
-</div>
-
-<div class="grid gap-3">
-
-<input class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerName" placeholder="الاسم الكامل"/>
-
-<input class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerPhone" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="رقم الهاتف"/>
-
-<select class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none w-full text-right pr-16" id="customerRegion">
-
-<option data-fee="15" value="طرابلس">طرابلس — 15 LYD</option>
-
-<option data-fee="15" value="السياحية">السياحية — 15 LYD</option>
-
-<option data-fee="15" value="حي الأندلس">حي الأندلس — 15 LYD</option>
-
-<option data-fee="15" value="الظهرة">الظهرة — 15 LYD</option>
-
-<option data-fee="15" value="زاوية الدهماني">زاوية الدهماني — 15 LYD</option>
-
-<option data-fee="15" value="النوفليين">النوفليين — 15 LYD</option>
-
-<option data-fee="15" value="بن عاشور">بن عاشور — 15 LYD</option>
-
-<option data-fee="15" value="شارع الجرابة">شارع الجرابة — 15 LYD</option>
-
-<option data-fee="15" value="شارع الزاوية">شارع الزاوية — 15 LYD</option>
-
-<option data-fee="15" value="شارع الجمهورية">شارع الجمهورية — 15 LYD</option>
-
-<option data-fee="15" value="شارع النصر">شارع النصر — 15 LYD</option>
-
-<option data-fee="15" value="باب بن غشير">باب بن غشير — 15 LYD</option>
-
-<option data-fee="15" value="قرقارش">قرقارش — 15 LYD</option>
-
-<option data-fee="15" value="غوط الشعال">غوط الشعال — 15 LYD</option>
-
-<option data-fee="15" value="السراج">السراج — 15 LYD</option>
-
-<option data-fee="15" value="الدريبي">الدريبي — 15 LYD</option>
-
-<option data-fee="15" value="قرجي">قرجي — 15 LYD</option>
-
-<option data-fee="15" value="قدح">قدح — 15 LYD</option>
-
-<option data-fee="15" value="أبوسليم">أبوسليم — 15 LYD</option>
-
-<option data-fee="15" value="الرياضية">الرياضية — 15 LYD</option>
-
-<option data-fee="15" value="الفلاح">الفلاح — 15 LYD</option>
-
-<option data-fee="15" value="غرغور">غرغور — 15 LYD</option>
-
-<option data-fee="15" value="حي الزهور">حي الزهور — 15 LYD</option>
-
-<option data-fee="20" value="طريق المطار">طريق المطار — 20 LYD</option>
-
-<option data-fee="15" value="الكيزة">الكيزة — 15 LYD</option>
-
-<option data-fee="15" value="صلاح الدين">صلاح الدين — 15 LYD</option>
-
-<option data-fee="20" value="خلة الفرجان">خلة الفرجان — 20 LYD</option>
-
-<option data-fee="15" value="طريق الشوك">طريق الشوك — 15 LYD</option>
-
-<option data-fee="15" value="الفرناج">الفرناج — 15 LYD</option>
-
-<option data-fee="15" value="الحي الجامعي">الحي الجامعي — 15 LYD</option>
-
-<option data-fee="15" value="سيدي المصري">سيدي المصري — 15 LYD</option>
-
-<option data-fee="15" value="راس حسن">راس حسن — 15 LYD</option>
-
-<option data-fee="15" value="زناتة">زناتة — 15 LYD</option>
-
-<option data-fee="15" value="جامع الصقع">جامع الصقع — 15 LYD</option>
-
-<option data-fee="15" value="الهاني">الهاني — 15 LYD</option>
-
-<option data-fee="15" value="عرادة">عرادة — 15 LYD</option>
-
-<option data-fee="15" value="الحشان">الحشان — 15 LYD</option>
-
-<option data-fee="15" value="سوق الجمعة">سوق الجمعة — 15 LYD</option>
-
-<option data-fee="15" value="كشلاف">كشلاف — 15 LYD</option>
-
-<option data-fee="15" value="الغرارات">الغرارات — 15 LYD</option>
-
-<option data-fee="15" value="بوستة">بوستة — 15 LYD</option>
-
-<option data-fee="15" value="طريق الشط">طريق الشط — 15 LYD</option>
-
-<option data-fee="15" value="معيتيقة">معيتيقة — 15 LYD</option>
-
-<option data-fee="15" value="11 يونيو">11 يونيو — 15 LYD</option>
-
-<option data-fee="15" value="السبعة">السبعة — 15 LYD</option>
-
-<option data-fee="20" value="طريق المشتل">طريق المشتل — 20 LYD</option>
-
-<option data-fee="15" value="حي دمشق">حي دمشق — 15 LYD</option>
-
-<option data-fee="20" value="ولي العهد">ولي العهد — 20 LYD</option>
-
-<option data-fee="20" value="السدرة">السدرة — 20 LYD</option>
-
-<option data-fee="20" value="عين زارة">عين زارة — 20 LYD</option>
-
-<option data-fee="15" value="طريق السور">طريق السور — 15 LYD</option>
-
-<option data-fee="15" value="بوابة الجبس">بوابة الجبس — 15 LYD</option>
-
-<option data-fee="15" value="غابة النصر">غابة النصر — 15 LYD</option>
-
-<option data-fee="15" value="شارع الصريم">شارع الصريم — 15 LYD</option>
-
-<option data-fee="15" value="فشلوم">فشلوم — 15 LYD</option>
-
-<option data-fee="15" value="المنصورة">المنصورة — 15 LYD</option>
-
-<option data-fee="15" value="عمر المختار">عمر المختار — 15 LYD</option>
-
-<option data-fee="20" value="الهضبة المشروع">الهضبة المشروع — 20 LYD</option>
-
-<option data-fee="30" value="بنغازي">بنغازي — 30 LYD</option>
-
-<option data-fee="30" value="راس عبيدة">راس عبيدة — 30 LYD</option>
-
-<option data-fee="30" value="بوزغيبة">بوزغيبة — 30 LYD</option>
-
-<option data-fee="30" value="حي السلام">حي السلام — 30 LYD</option>
-
-<option data-fee="30" value="شبنة">شبنة — 30 LYD</option>
-
-<option data-fee="30" value="طريق النهر">طريق النهر — 30 LYD</option>
-
-<option data-fee="30" value="الماجوري">الماجوري — 30 LYD</option>
-
-<option data-fee="30" value="سيدي حسين">سيدي حسين — 30 LYD</option>
-
-<option data-fee="30" value="البركة">البركة — 30 LYD</option>
-
-<option data-fee="30" value="الحدائق">الحدائق — 30 LYD</option>
-
-<option data-fee="30" value="أرض لملوم">أرض لملوم — 30 LYD</option>
-
-<option data-fee="30" value="السلماني">السلماني — 30 LYD</option>
-
-<option data-fee="30" value="الوحيشي">الوحيشي — 30 LYD</option>
-
-<option data-fee="30" value="سيدي يونس">سيدي يونس — 30 LYD</option>
-
-<option data-fee="30" value="ارض الحراسة">ارض الحراسة — 30 LYD</option>
-
-<option data-fee="30" value="طابلينو">طابلينو — 30 LYD</option>
-
-<option data-fee="30" value="الرحبة">الرحبة — 30 LYD</option>
-
-<option data-fee="30" value="بلعون">بلعون — 30 LYD</option>
-
-<option data-fee="30" value="بوهديمة">بوهديمة — 30 LYD</option>
-
-<option data-fee="30" value="الليثي">الليثي — 30 LYD</option>
-
-<option data-fee="30" value="الفويهات">الفويهات — 30 LYD</option>
-
-<option data-fee="30" value="سوق الفحم">سوق الفحم — 30 LYD</option>
-
-<option data-fee="30" value="بوعطني">بوعطني — 30 LYD</option>
-
-<option data-fee="30" value="المساكن">المساكن — 30 LYD</option>
-
-<option data-fee="30" value="قاريونس">قاريونس — 30 LYD</option>
-
-<option data-fee="30" value="الكويفية">الكويفية — 30 LYD</option>
-
-<option data-fee="30" value="بنينا">بنينا — 30 LYD</option>
-
-<option data-fee="30" value="قنفوذة">قنفوذة — 30 LYD</option>
-
-<option data-fee="30" value="سيدي خليفة">سيدي خليفة — 30 LYD</option>
-
-<option data-fee="30" value="الهواري">الهواري — 30 LYD</option>
-
-<option data-fee="30" value="الفعكات">الفعكات — 30 LYD</option>
-
-<option data-fee="30" value="بوهادي">بوهادي — 30 LYD</option>
-
-<option data-fee="30" value="الكيش">الكيش — 30 LYD</option>
-
-<option data-fee="25" value="دقادوستا">دقادوستا — 25 LYD</option>
-
-<option data-fee="30" value="شارع فينيسيا">شارع فينيسيا — 30 LYD</option>
-
-<option data-fee="35" value="ثاكنس">ثاكنس — 35 LYD</option>
-
-<option data-fee="35" value="الرجمة">الرجمة — 35 LYD</option>
-
-<option data-fee="35" value="جردينة">جردينة — 35 LYD</option>
-
-<option data-fee="35" value="المقزحة">المقزحة — 35 LYD</option>
-
-<option data-fee="35" value="بو مريم">بو مريم — 35 LYD</option>
-
-<option data-fee="30" value="سيدي فرج">سيدي فرج — 30 LYD</option>
-
-<option data-fee="30" value="بو دزيرة">بو دزيرة — 30 LYD</option>
-
-<option data-fee="30" value="الصابري">الصابري — 30 LYD</option>
-
-<option data-fee="30" value="القوارشة">القوارشة — 30 LYD</option>
-
-<option data-fee="30" value="الرويسات - بنغازي">الرويسات - بنغازي — 30 LYD</option>
-
-<option data-fee="30" value="حي الدولار">حي الدولار — 30 LYD</option>
-
-<option data-fee="30" value="حي الفاتح">حي الفاتح — 30 LYD</option>
-
-<option data-fee="30" value="شارع دبي">شارع دبي — 30 LYD</option>
-
-<option data-fee="30" value="السيدة عائشة">السيدة عائشة — 30 LYD</option>
-
-<option data-fee="30" value="بوصنيب">بوصنيب — 30 LYD</option>
-
-<option data-fee="30" value="سبها">سبها — 30 LYD</option>
-
-<option data-fee="25" value="مصراتة">مصراتة — 25 LYD</option>
-
-<option data-fee="25" value="شارع بنغازي">شارع بنغازي — 25 LYD</option>
-
-<option data-fee="25" value="شارع الهلال">شارع الهلال — 25 LYD</option>
-
-<option data-fee="25" value="الجامع العالي">الجامع العالي — 25 LYD</option>
-
-<option data-fee="25" value="شارع سناء محيدلي">شارع سناء محيدلي — 25 LYD</option>
-
-<option data-fee="25" value="شارع الاذاعة">شارع الاذاعة — 25 LYD</option>
-
-<option data-fee="25" value="المقاوبة">المقاوبة — 25 LYD</option>
-
-<option data-fee="25" value="شارع مالطا">شارع مالطا — 25 LYD</option>
-
-<option data-fee="25" value="جزيرة النهر">جزيرة النهر — 25 LYD</option>
-
-<option data-fee="25" value="شارع المطبات">شارع المطبات — 25 LYD</option>
-
-<option data-fee="25" value="الشواهدة">الشواهدة — 25 LYD</option>
-
-<option data-fee="25" value="الجزيرة">الجزيرة — 25 LYD</option>
-
-<option data-fee="25" value="إقزير">إقزير — 25 LYD</option>
-
-<option data-fee="25" value="كرزاز">كرزاز — 25 LYD</option>
-
-<option data-fee="25" value="الغيران">الغيران — 25 LYD</option>
-
-<option data-fee="25" value="طريق المطار">طريق المطار — 25 LYD</option>
-
-<option data-fee="25" value="طمينة">طمينة — 25 LYD</option>
-
-<option data-fee="25" value="الكراريم">الكراريم — 25 LYD</option>
-
-<option data-fee="25" value="زاوية المحجوب">زاوية المحجوب — 25 LYD</option>
-
-<option data-fee="25" value="قصر حمد">قصر حمد — 25 LYD</option>
-
-<option data-fee="25" value="الثقيل">الثقيل — 25 LYD</option>
-
-<option data-fee="25" value="الجهانات">الجهانات — 25 LYD</option>
-
-<option data-fee="25" value="الزوابى">الزوابى — 25 LYD</option>
-
-<option data-fee="25" value="الشراكسة">الشراكسة — 25 LYD</option>
-
-<option data-fee="25" value="الكراوده">الكراوده — 25 LYD</option>
-
-<option data-fee="25" value="القدارية">القدارية — 25 LYD</option>
-
-<option data-fee="25" value="الحيارشة">الحيارشة — 25 LYD</option>
-
-<option data-fee="25" value="السواوة">السواوة — 25 LYD</option>
-
-<option data-fee="25" value="بوروية">بوروية — 25 LYD</option>
-
-<option data-fee="25" value="السِكت">السِكت — 25 LYD</option>
-
-<option data-fee="25" value="الرعيضات">الرعيضات — 25 LYD</option>
-
-<option data-fee="25" value="السكيرات">السكيرات — 25 LYD</option>
-
-<option data-fee="25" value="الهباره">الهباره — 25 LYD</option>
-
-<option data-fee="25" value="الملايطة">الملايطة — 25 LYD</option>
-
-<option data-fee="25" value="الزروق">الزروق — 25 LYD</option>
-
-<option data-fee="25" value="الرملة">الرملة — 25 LYD</option>
-
-<option data-fee="25" value="قرارة">قرارة — 25 LYD</option>
-
-<option data-fee="25" value="يدر">يدر — 25 LYD</option>
-
-<option data-fee="25" value="راس علي">راس علي — 25 LYD</option>
-
-<option data-fee="25" value="المنقوش">المنقوش — 25 LYD</option>
-
-<option data-fee="25" value="عباد">عباد — 25 LYD</option>
-
-<option data-fee="25" value="الدافنية">الدافنية — 25 LYD</option>
-
-<option data-fee="25" value="زمورة">زمورة — 25 LYD</option>
-
-<option data-fee="25" value="شارع بازينة">شارع بازينة — 25 LYD</option>
-
-<option data-fee="25" value="شارع سعدون">شارع سعدون — 25 LYD</option>
-
-<option data-fee="25" value="المقاصبة">المقاصبة — 25 LYD</option>
-
-<option data-fee="25" value="الصوالح">الصوالح — 25 LYD</option>
-
-<option data-fee="25" value="راس السايح">راس السايح — 25 LYD</option>
-
-<option data-fee="25" value="راس فريدغ">راس فريدغ — 25 LYD</option>
-
-<option data-fee="25" value="راس التوتة">راس التوتة — 25 LYD</option>
-
-<option data-fee="25" value="شارع الدم">شارع الدم — 25 LYD</option>
-
-<option data-fee="25" value="الخروبة">الخروبة — 25 LYD</option>
-
-<option data-fee="25" value="طريق رقم 8">طريق رقم 8 — 25 LYD</option>
-
-<option data-fee="25" value="دائري إقزير">دائري إقزير — 25 LYD</option>
-
-<option data-fee="25" value="طريق البحر">طريق البحر — 25 LYD</option>
-
-<option data-fee="25" value="الرويسات - مصراتة">الرويسات - مصراتة — 25 LYD</option>
-
-<option data-fee="25" value="زريق">زريق — 25 LYD</option>
-
-<option data-fee="25" value="السكت">السكت — 25 LYD</option>
-
-<option data-fee="25" value="المغدر">المغدر — 25 LYD</option>
-
-<option data-fee="25" value="السواطي">السواطي — 25 LYD</option>
-
-<option data-fee="25" value="سور سعود">سور سعود — 25 LYD</option>
-
-<option data-fee="25" value="النباك">النباك — 25 LYD</option>
-
-<option data-fee="25" value="أولاد بعيو">أولاد بعيو — 25 LYD</option>
-
-<option data-fee="25" value="الزاوية">الزاوية — 25 LYD</option>
-
-<option data-fee="20" value="جنزور">جنزور — 20 LYD</option>
-
-<option data-fee="25" value="صرمان">صرمان — 25 LYD</option>
-
-<option data-fee="25" value="صبراتة">صبراتة — 25 LYD</option>
-
-<option data-fee="30" value="العجيلات">العجيلات — 30 LYD</option>
-
-<option data-fee="30" value="زوارة">زوارة — 30 LYD</option>
-
-<option data-fee="30" value="الجميل">الجميل — 30 LYD</option>
-
-<option data-fee="30" value="رقدالين">رقدالين — 30 LYD</option>
-
-<option data-fee="35" value="زلطن">زلطن — 35 LYD</option>
-
-<option data-fee="20" value="تاجوراء">تاجوراء — 20 LYD</option>
-
-<option data-fee="20" value="القره بوللي">القره بوللي — 20 LYD</option>
-
-<option data-fee="20" value="قصر الاخيار">قصر الاخيار — 20 LYD</option>
-
-<option data-fee="20" value="الخمس">الخمس — 20 LYD</option>
-
-<option data-fee="20" value="زليتن">زليتن — 20 LYD</option>
-
-<option data-fee="35" value="بن جواد">بن جواد — 35 LYD</option>
-
-<option data-fee="30" value="بن وليد">بن وليد — 30 LYD</option>
-
-<option data-fee="30" value="ترهونة">ترهونة — 30 LYD</option>
-
-<option data-fee="30" value="سرت">سرت — 30 LYD</option>
-
-<option data-fee="35" value="راس لانوف">راس لانوف — 35 LYD</option>
-
-<option data-fee="35" value="البريقة">البريقة — 35 LYD</option>
-
-<option data-fee="30" value="إجدابيا">إجدابيا — 30 LYD</option>
-
-<option data-fee="35" value="المرج">المرج — 35 LYD</option>
-
-<option data-fee="35" value="دريانة">دريانة — 35 LYD</option>
-
-<option data-fee="35" value="المدني">المدني — 35 LYD</option>
-
-<option data-fee="35" value="توكرة">توكرة — 35 LYD</option>
-
-<option data-fee="35" value="برسس">برسس — 35 LYD</option>
-
-<option data-fee="35" value="سي بوزيد">سي بوزيد — 35 LYD</option>
-
-<option data-fee="35" value="طلميثة">طلميثة — 35 LYD</option>
-
-<option data-fee="35" value="تاكنس">تاكنس — 35 LYD</option>
-
-<option data-fee="35" value="جردس">جردس — 35 LYD</option>
-
-<option data-fee="35" value="البنية">البنية — 35 LYD</option>
-
-<option data-fee="35" value="المليطانية">المليطانية — 35 LYD</option>
-
-<option data-fee="35" value="مدور الزيتون">مدور الزيتون — 35 LYD</option>
-
-<option data-fee="35" value="البياضة">البياضة — 35 LYD</option>
-
-<option data-fee="35" value="بطة">بطة — 35 LYD</option>
-
-<option data-fee="35" value="أبو ترابة">أبو ترابة — 35 LYD</option>
-
-<option data-fee="35" value="المرج الوسط">المرج الوسط — 35 LYD</option>
-
-<option data-fee="35" value="البيضاء">البيضاء — 35 LYD</option>
-
-<option data-fee="35" value="مراوة">مراوة — 35 LYD</option>
-
-<option data-fee="35" value="مسة">مسة — 35 LYD</option>
-
-<option data-fee="35" value="الغريقة">الغريقة — 35 LYD</option>
-
-<option data-fee="35" value="البيضاء الوسط">البيضاء الوسط — 35 LYD</option>
-
-<option data-fee="35" value="سلتونة">سلتونة — 35 LYD</option>
-
-<option data-fee="35" value="صفصاف">صفصاف — 35 LYD</option>
-
-<option data-fee="35" value="الحمامة">الحمامة — 35 LYD</option>
-
-<option data-fee="35" value="الحنية">الحنية — 35 LYD</option>
-
-<option data-fee="35" value="الوسيطة">الوسيطة — 35 LYD</option>
-
-<option data-fee="35" value="قرنادة">قرنادة — 35 LYD</option>
-
-<option data-fee="35" value="الفايدية">الفايدية — 35 LYD</option>
-
-<option data-fee="35" value="شحات">شحات — 35 LYD</option>
-
-<option data-fee="45" value="طبرق">طبرق — 45 LYD</option>
-
-<option data-fee="25" value="غريان">غريان — 25 LYD</option>
-
-<option data-fee="35" value="الاصابعة">الاصابعة — 35 LYD</option>
-
-<option data-fee="45" value="الزنتان">الزنتان — 45 LYD</option>
-
-<option data-fee="45" value="جادو">جادو — 45 LYD</option>
-
-<option data-fee="45" value="نالوت">نالوت — 45 LYD</option>
-
-<option data-fee="40" value="براك الشاطئ">براك الشاطئ — 40 LYD</option>
-
-<option data-fee="35" value="هون">هون — 35 LYD</option>
-
-<option data-fee="20" value="السواني">السواني — 20 LYD</option>
-
-<option data-fee="8" value="تسليم بفرع حي الاندلس">تسليم بفرع حي الاندلس — 8 LYD</option>
-
-<option data-fee="40" value="درنة">درنة — 40 LYD</option>
-
-<option data-fee="35" value="الفتائح">الفتائح — 35 LYD</option>
-
-<option data-fee="35" value="كرسة">كرسة — 35 LYD</option>
-
-<option data-fee="35" value="وادي الناقة">وادي الناقة — 35 LYD</option>
-
-<option data-fee="35" value="مرتوبة">مرتوبة — 35 LYD</option>
-
-<option data-fee="35" value="سي خالد">سي خالد — 35 LYD</option>
-
-<option data-fee="35" value="حي القاعدة الجوية">حي القاعدة الجوية — 35 LYD</option>
-
-<option data-fee="35" value="سيدي عون">سيدي عون — 35 LYD</option>
-
-<option data-fee="35" value="ام الرزم">ام الرزم — 35 LYD</option>
-
-<option data-fee="35" value="لاثرون">لاثرون — 35 LYD</option>
-
-<option data-fee="35" value="خليج البمبة">خليج البمبة — 35 LYD</option>
-
-<option data-fee="45" value="التميمي">التميمي — 45 LYD</option>
-
-<option data-fee="45" value="العزيات">العزيات — 45 LYD</option>
-
-<option data-fee="45" value="رأس التين">رأس التين — 45 LYD</option>
-
-<option data-fee="35" value="درنة الوسط">درنة الوسط — 35 LYD</option>
-
-<option data-fee="20" value="قصربن غشير">قصربن غشير — 20 LYD</option>
-
-<option data-fee="25" value="مطرد">مطرد — 25 LYD</option>
-
-<option data-fee="35" value="الابيار">الابيار — 35 LYD</option>
-
-<option data-fee="20" value="وادي الربيع">وادي الربيع — 20 LYD</option>
-
-<option data-fee="45" value="القلعة">القلعة — 45 LYD</option>
-
-<option data-fee="45" value="تيجي">تيجي — 45 LYD</option>
-
-<option data-fee="45" value="أوباري">أوباري — 45 LYD</option>
-
-<option data-fee="45" value="مرزق">مرزق — 45 LYD</option>
-
-<option data-fee="45" value="يفرن">يفرن — 45 LYD</option>
-
-<option data-fee="20" value="طرابلس تسليم نسائي">طرابلس تسليم نسائي — 20 LYD</option>
-
-<option data-fee="20" value="السياحية">السياحية — 20 LYD</option>
-
-<option data-fee="20" value="حي الأندلس">حي الأندلس — 20 LYD</option>
-
-<option data-fee="20" value="الظهرة">الظهرة — 20 LYD</option>
-
-<option data-fee="20" value="زاوية الدهماني">زاوية الدهماني — 20 LYD</option>
-
-<option data-fee="20" value="النوفليين">النوفليين — 20 LYD</option>
-
-<option data-fee="20" value="بن عاشور">بن عاشور — 20 LYD</option>
-
-<option data-fee="20" value="شارع الجرابة">شارع الجرابة — 20 LYD</option>
-
-<option data-fee="20" value="شارع الزاوية">شارع الزاوية — 20 LYD</option>
-
-<option data-fee="20" value="شارع الجمهورية">شارع الجمهورية — 20 LYD</option>
-
-<option data-fee="20" value="شارع النصر">شارع النصر — 20 LYD</option>
-
-<option data-fee="20" value="باب بن غشير">باب بن غشير — 20 LYD</option>
-
-<option data-fee="20" value="قرقارش">قرقارش — 20 LYD</option>
-
-<option data-fee="20" value="غوط الشعال">غوط الشعال — 20 LYD</option>
-
-<option data-fee="20" value="السراج">السراج — 20 LYD</option>
-
-<option data-fee="20" value="الدريبي">الدريبي — 20 LYD</option>
-
-<option data-fee="20" value="قرجي">قرجي — 20 LYD</option>
-
-<option data-fee="20" value="قدح">قدح — 20 LYD</option>
-
-<option data-fee="20" value="أبوسليم">أبوسليم — 20 LYD</option>
-
-<option data-fee="20" value="الرياضية">الرياضية — 20 LYD</option>
-
-<option data-fee="20" value="الفلاح">الفلاح — 20 LYD</option>
-
-<option data-fee="20" value="غرغور">غرغور — 20 LYD</option>
-
-<option data-fee="25" value="حي الزهور">حي الزهور — 25 LYD</option>
-
-<option data-fee="25" value="طريق المطار">طريق المطار — 25 LYD</option>
-
-<option data-fee="25" value="الهضبة">الهضبة — 25 LYD</option>
-
-<option data-fee="25" value="صلاح الدين">صلاح الدين — 25 LYD</option>
-
-<option data-fee="25" value="خلة الفرجان">خلة الفرجان — 25 LYD</option>
-
-<option data-fee="20" value="طريق الشوك">طريق الشوك — 20 LYD</option>
-
-<option data-fee="20" value="الفرناج">الفرناج — 20 LYD</option>
-
-<option data-fee="20" value="الحي الجامعي">الحي الجامعي — 20 LYD</option>
-
-<option data-fee="20" value="سيدي المصري">سيدي المصري — 20 LYD</option>
-
-<option data-fee="20" value="راس حسن">راس حسن — 20 LYD</option>
-
-<option data-fee="20" value="زناتة">زناتة — 20 LYD</option>
-
-<option data-fee="20" value="جامع الصقع">جامع الصقع — 20 LYD</option>
-
-<option data-fee="20" value="الهاني">الهاني — 20 LYD</option>
-
-<option data-fee="20" value="عرادة">عرادة — 20 LYD</option>
-
-<option data-fee="20" value="الحشان">الحشان — 20 LYD</option>
-
-<option data-fee="20" value="سوق الجمعة">سوق الجمعة — 20 LYD</option>
-
-<option data-fee="20" value="كشلاف">كشلاف — 20 LYD</option>
-
-<option data-fee="20" value="الغرارات">الغرارات — 20 LYD</option>
-
-<option data-fee="20" value="بوستة">بوستة — 20 LYD</option>
-
-<option data-fee="20" value="طريق الشط">طريق الشط — 20 LYD</option>
-
-<option data-fee="20" value="معيتيقة">معيتيقة — 20 LYD</option>
-
-<option data-fee="20" value="11 يونيو">11 يونيو — 20 LYD</option>
-
-<option data-fee="20" value="السبعة">السبعة — 20 LYD</option>
-
-<option data-fee="20" value="طريق المشتل">طريق المشتل — 20 LYD</option>
-
-<option data-fee="20" value="حي دمشق">حي دمشق — 20 LYD</option>
-
-<option data-fee="20" value="ولي العهد">ولي العهد — 20 LYD</option>
-
-<option data-fee="20" value="السدرة">السدرة — 20 LYD</option>
-
-<option data-fee="25" value="عين زارة">عين زارة — 25 LYD</option>
-
-<option data-fee="20" value="طريق السور">طريق السور — 20 LYD</option>
-
-<option data-fee="20" value="بوابة الجبس">بوابة الجبس — 20 LYD</option>
-
-<option data-fee="20" value="غابة النصر">غابة النصر — 20 LYD</option>
-
-<option data-fee="20" value="شارع الصريم">شارع الصريم — 20 LYD</option>
-
-<option data-fee="50" value="غات">غات — 50 LYD</option>
-
-<option data-fee="45" value="الرجبان">الرجبان — 45 LYD</option>
-
-<option data-fee="25" value="السبيعة">السبيعة — 25 LYD</option>
-
-<option data-fee="40" value="القبة">القبة — 40 LYD</option>
-
-<option data-fee="20" value="ورشفانة الزهراء">ورشفانة الزهراء — 20 LYD</option>
-
-<option data-fee="20" value="ورشفانة الساعدية">ورشفانة الساعدية — 20 LYD</option>
-
-<option data-fee="20" value="ورشفانة العزيزية">ورشفانة العزيزية — 20 LYD</option>
-
-<option data-fee="35" value="بنغازي تسليم نسائي">بنغازي تسليم نسائي — 35 LYD</option>
-
-<option data-fee="30" value="مصراتة تسليم نسائي">مصراتة تسليم نسائي — 30 LYD</option>
-
-<option data-fee="8" value="تسليم بفرع الجرابة">تسليم بفرع الجرابة — 8 LYD</option>
-
-<option data-fee="20" value="تسليم بفرع بنغازي">تسليم بفرع بنغازي — 20 LYD</option>
-
-<option data-fee="8" value="تسليم بفرع السراج">تسليم بفرع السراج — 8 LYD</option>
-
-<option data-fee="30" value="مسلاتة">مسلاتة — 30 LYD</option>
-
-<option data-fee="45" value="تراغن">تراغن — 45 LYD</option>
-
-<option data-fee="45" value="أم الارانب">أم الارانب — 45 LYD</option>
-
-<option data-fee="35" value="سمنو">سمنو — 35 LYD</option>
-
-<option data-fee="40" value="سوسة">سوسة — 40 LYD</option>
-
-<option data-fee="35" value="الأبرق">الأبرق — 35 LYD</option>
-
-<option data-fee="50" value="جالو">جالو — 50 LYD</option>
-
-<option data-fee="50" value="أوجلة">أوجلة — 50 LYD</option>
-
-<option data-fee="45" value="إجخرة">إجخرة — 45 LYD</option>
-
-<option data-fee="50" value="تازربو">تازربو — 50 LYD</option>
-
-<option data-fee="50" value="الكفرة">الكفرة — 50 LYD</option>
-
-<option data-fee="15" value="تسليم بفرع مصراتة">تسليم بفرع مصراتة — 15 LYD</option>
-
-<option data-fee="45" value="الجوش">الجوش — 45 LYD</option>
-
-<option data-fee="45" value="بدر">بدر — 45 LYD</option>
-
-<option data-fee="35" value="الرابطة">الرابطة — 35 LYD</option>
-
-<option data-fee="45" value="الرياينة">الرياينة — 45 LYD</option>
-
-<option data-fee="45" value="العوينية">العوينية — 45 LYD</option>
-
-<option data-fee="45" value="الرحيبات">الرحيبات — 45 LYD</option>
-
-<option data-fee="45" value="أولاد محمود">أولاد محمود — 45 LYD</option>
-
-<option data-fee="45" value="الحرابة">الحرابة — 45 LYD</option>
-
-<option data-fee="45" value="كاباو">كاباو — 45 LYD</option>
-
-<option data-fee="45" value="طمزين">طمزين — 45 LYD</option>
-
-<option data-fee="45" value="الحوامد">الحوامد — 45 LYD</option>
-
-<option data-fee="45" value="شكشوك">شكشوك — 45 LYD</option>
-
-<option data-fee="45" value="تكويت">تكويت — 45 LYD</option>
-
-<option data-fee="50" value="وازن">وازن — 50 LYD</option>
-
-<option data-fee="35" value="ككلة">ككلة — 35 LYD</option>
-
-<option data-fee="40" value="رأس هلال">رأس هلال — 40 LYD</option>
-
-<option data-fee="35" value="سوكنة">سوكنة — 35 LYD</option>
-
-<option data-fee="35" value="ودان">ودان — 35 LYD</option>
-
-<option data-fee="45" value="زلة">زلة — 45 LYD</option>
-
-<option data-fee="50" value="الجغبوب">الجغبوب — 50 LYD</option>
-
-<option data-fee="8" value="تسليم بفرع عين زارة">تسليم بفرع عين زارة — 8 LYD</option>
-
-<option data-fee="25" value="تسليم بفرع سبها">تسليم بفرع سبها — 25 LYD</option>
-
-<option data-fee="55" value="القطرون">القطرون — 55 LYD</option>
-
-<option data-fee="30" value="سوبر فانكس طرابلس">سوبر فانكس طرابلس — 30 LYD</option>
-
-<option data-fee="35" value="الشويرف">الشويرف — 35 LYD</option>
-
-<option data-fee="30" value="أبو قرين">أبو قرين — 30 LYD</option>
-
-<option data-fee="25" value="تسليم بفرع البيضاء">تسليم بفرع البيضاء — 25 LYD</option>
-
-<option data-fee="20" value="تسليم بفرع زوارة">تسليم بفرع زوارة — 20 LYD</option>
-
-<option data-fee="8" value="تسليم بفرع سوق الجمعة">تسليم بفرع سوق الجمعة — 8 LYD</option>
-
-<option data-fee="20" value="تسليم بفرع اجدابيا">تسليم بفرع اجدابيا — 20 LYD</option>
-
-<option data-fee="50" value="امساعد">امساعد — 50 LYD</option>
-
-<option data-fee="50" value="البردي">البردي — 50 LYD</option>
-
-<option data-fee="50" value="بئر الأشهب">بئر الأشهب — 50 LYD</option>
-
-<option data-fee="50" value="كمبوت">كمبوت — 50 LYD</option>
-
-<option data-fee="30" value="مزدة">مزدة — 30 LYD</option>
-
-<option data-fee="40" value="أبو كماش">أبو كماش — 40 LYD</option>
-
-<option data-fee="10" value="بوكس HT Mall">بوكس HT Mall — 10 LYD</option>
-
-<option data-fee="30" value="قمينس">قمينس — 30 LYD</option>
-
-<option data-fee="30" value="الطلحية">الطلحية — 30 LYD</option>
-
-<option data-fee="30" value="تيكا">تيكا — 30 LYD</option>
-
-<option data-fee="30" value="جروثة">جروثة — 30 LYD</option>
-
-<option data-fee="30" value="المقرون">المقرون — 30 LYD</option>
-
-<option data-fee="30" value="النواقية">النواقية — 30 LYD</option>
-
-<option data-fee="30" value="سلوق">سلوق — 30 LYD</option>
-
-<option data-fee="35" value="بئر غنم">بئر غنم — 35 LYD</option>
-
-<option data-fee="35" value="بئر معمر">بئر معمر — 35 LYD</option>
-
-<option data-fee="35" value="بئر هويسة">بئر هويسة — 35 LYD</option>
-
-</select>
-
-<!-- مكتبة Choices.js -->
-
-<link href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
-
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-
-<style>
-
-/* تعديل شكل الـ select ليبقى مثل زرّك الأول */
-
-.choices {
-
- background-color: rgba(255,255,255,0.1) !important;
-
- border-radius: 0.75rem !important; /* نفس rounded-xl */
-
- border: 1px solid rgba(255,255,255,0.1) !important; /* نفس ring */
-
- color: white !important;
-
-}
-
-.choices__inner {
-
- background: transparent !important;
-
- border: none !important;
-
- min-height: auto !important;
-
- padding: 0.5rem 0.75rem !important;
-
-}
-
-.choices__list--single {
-
- color: white !important;
-
-}
-
-.choices__list--dropdown {
-
- background: rgba(0,0,0,0.9) !important; /* القائمة السوداء */
-
- color: white !important;
-
-}
-
-.choices__item--choice {
-
- color: white !important;
-
-}
-
-.choices__item--choice.is-highlighted {
-
- background: rgba(255,255,255,0.2) !important;
-
-}
-
-</style>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
- const regionSelect = document.getElementById("customerRegion");
-
-
-
- new Choices(regionSelect, {
-
-  searchEnabled: true,
-
-  itemSelectText: '',
-
-  placeholder: true,
-
-  searchPlaceholderValue: "اكتب للبحث...",
-
- });
-
-});
-
-</script>
-
-<textarea class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerNotes" placeholder="اقرب نقطه دالة (مع كتابة اي ملاحظات)" rows="3"></textarea>
-
-</div>
-
-<div class="mt-4 flex items-center justify-end gap-3">
-
-<button class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" id="cancelCheckoutBtn">إلغاء</button>
-
-<button class="px-4 py-2 rounded-xl bg-brand hover:bg-brand/90" id="confirmCheckoutBtn" type="submit">
-
- تأكيد وإرسال على واتساب
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-  // === إعدادات ثابتة ===
-
-  const WHATSAPP_NUMBER = '218913077275'; // ضع رقم واتسابك بدون +
-
-  const CURRENCY = 'دينار ليبي';
-
-  const SHEET_API = 'https://nameless-sky-96ab.mahmoodeshbeni.workers.dev';
-
-
-
-  // === حالة التطبيق ===
-
-  let PRODUCTS = [];
-
-  let cart = [];
-
-
-
-  const grid = document.getElementById('productsGrid');
-
-  const searchInput = document.getElementById('searchInput');
-
-
-
-  // === تحميل المنتجات من Google Sheets ===
-
-  async function loadProducts() {
-
-   try {
-
-    const res = await fetch(SHEET_API, { cache: 'no-store' });
-
-    const data = await res.json();
-
-    // تأكد من الأشكال وتحويل price/stock للأرقام
-
-    PRODUCTS = (Array.isArray(data) ? data : []).map(p => ({
-
-     id: String(p.id),
-
-     title: p.title || '',
-
-     description: p.description || '',
-
-     image: p.image || '',
-
-     price: Number(p.price) || 0,
-
-     stock: Number(p.stock) || 0
-
-    }));
-
-    renderProducts(PRODUCTS);
-
-   } catch (err) {
-
-    console.error('فشل جلب المنتجات من Google Sheets:', err);
-
-    grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">تعذر تحميل المنتجات من Google Sheets</div>';
-
-   }
-
-  }
-
-
-
-  // === بناء كروت المنتجات ===
-
-  function renderProducts(list) {
-
-   grid.innerHTML = '';
-
-   list.forEach(prod => {
-
-    const card = document.createElement('div');
-
-    card.className = 'rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden flex flex-col';
-
-    card.innerHTML = `
-
-     <div class="aspect-[4/3] overflow-hidden">
-
-      <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover">
-
-     </div>
-
-     <div class="p-5 flex-1 flex flex-col gap-3">
-
-      <h3 class="text-lg font-semibold">${prod.title}</h3>
-
-      <p class="text-slate-300 text-sm">${prod.description}</p>
-
-      <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
-
-       الكمية: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
-
-      </p>
-
-      <div class="mt-auto flex items-center justify-between">
-
-       <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
-
-       <div class="flex items-center gap-2">
-
-        <input type="number" min="1" max="${prod.stock}" value="1"
-
-         class="qty w-20 px-3 py-2 text-sm rounded-xl bg-white/10 ring-1 ring-white/10"
-
-         ${prod.stock === 0 ? "disabled" : ""}>
-
-        <button data-id="${prod.id}"
-
-         class="addToCart px-4 py-2 rounded-xl transition ${prod.stock === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-brand hover:bg-brand/90'}"
-
-         ${prod.stock === 0 ? 'disabled' : ''}>
-
-         ${prod.stock > 0 ? 'إضافة' : 'نفد'}
-
-        </button>
-
-       </div>
-
-      </div>
-
-     </div>
-
-    `;
-
-    grid.appendChild(card);
-
-   });
-
-
-
-   // ربط أزرار الإضافة بعد الرسم
-
-   document.querySelectorAll('.addToCart').forEach(btn => {
-
-    btn.addEventListener('click', (e) => {
-
-     const id = e.currentTarget.getAttribute('data-id');
-
-     const cardEl = e.currentTarget.closest('.rounded-3xl');
-
-     const qtyEl = cardEl ? cardEl.querySelector('.qty') : null;
-
-     let qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
-
-     if (isNaN(qty) || qty < 1) qty = 1;
-
-
-
-     const product = PRODUCTS.find(p => String(p.id) === String(id));
-
-     if (!product) return;
-
-
-
-     if (qty > product.stock) {
-
-      alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
-
-      if (qtyEl) qtyEl.value = product.stock > 0 ? product.stock : 1;
-
-      return;
-
-     }
-
-
-
-     addToCart(product.id, qty);
-
-     showToast(`تمت إضافة ${qty} × ${product.title} إلى السلة`);
-
-     animateCart();
-
-     const cartBtn = document.getElementById("cartBtn");
-
-     if (cartBtn) {
-
-      cartBtn.classList.add("cart-animate");
-
-      setTimeout(() => cartBtn.classList.remove("cart-animate"), 400);
-
-     }
-
-    });
-
-   });
-
-  }
-
-
-
-  // بحث
-
-  if (searchInput) {
-
-   searchInput.addEventListener('input', (e) => {
-
-    const q = e.target.value.trim();
-
-    const filtered = PRODUCTS.filter(p => p.title.includes(q) || p.description.includes(q));
-
-    renderProducts(filtered);
-
-   });
-
-  }
-
-
-
-  // === عمليات السلة ===
-
-  const cartDrawer = document.getElementById('cartDrawer');
-
-  const cartOverlay = document.getElementById('cartOverlay');
-
-  const cartBtn = document.getElementById('cartBtn');
-
-  const closeCartBtn = document.getElementById('closeCartBtn');
-
-  const cartItems = document.getElementById('cartItems');
-
-  const cartCount = document.getElementById('cartCount');
-
-  const cartTotal = document.getElementById('cartTotal');
-
-  const checkoutBtn = document.getElementById('checkoutBtn');
-
-
-
-  function addToCart(id, qty) {
-
-   const product = PRODUCTS.find(p => p.id === id);
-
-   if (!product) return;
-
-
-
-   if (qty > product.stock) {
-
-    alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
-
-    return;
-
-   }
-
-
-
-   const existing = cart.find(i => i.id === id);
-
-   if (existing) {
-
-    if (existing.qty + qty > product.stock) {
-
-     alert(`لا يمكنك إضافة أكثر من ${product.stock} قطعة من ${product.title}`);
-
-     return;
-
-    }
-
-    existing.qty += qty;
-
-   } else {
-
-    cart.push({ id, qty });
-
-   }
-
-   updateCartUI(false);
-
-  }
-
-
-
-  function removeFromCart(id) {
-
-   cart = cart.filter(i => i.id !== id);
-
-   updateCartUI(false);
-
-  }
-
-
-
-  function updateQty(id, qty) {
-
-   const item = cart.find(i => i.id === id);
-
-   if (item) {
-
-    item.qty = Math.max(1, qty);
-
-    updateCartUI(false);
-
-   }
-
-  }
-
-
-
-  function calcTotal() {
-
-   return cart.reduce((sum, i) => {
-
-    const p = PRODUCTS.find(p => p.id === i.id);
-
-    return sum + (p.price * i.qty);
-
-   }, 0);
-
-  }
-
-
-
-  function updateCartUI(open = false) {
-
-   cartItems.innerHTML = '';
-
-   cart.forEach(i => {
-
-    const p = PRODUCTS.find(p => p.id === i.id);
-
-    const row = document.createElement('div');
-
-    row.className = 'py-4 flex items-center gap-3';
-
-    row.innerHTML = `
-
-     <img src="${p.image}" class="w-16 h-12 rounded-lg object-cover ring-1 ring-white/10" alt="${p.title}">
-
-     <div class="flex-1">
-
-      <p class="font-medium">${p.title}</p>
-
-      <p class="text-slate-300 text-sm">${p.price.toFixed(2)} ${CURRENCY}</p>
-
-     </div>
-
-     <div class="flex items-center gap-2">
-
-      <input type="number" min="1" value="${i.qty}" class="itemQty w-20 px-2 py-1 rounded-lg bg-white/10 ring-1 ring-white/10" data-id="${i.id}">
-
-      <button class="removeItem text-red-300 hover:text-red-400" data-id="${i.id}">حذف</button>
-
-     </div>
-
-    `;
-
-    cartItems.appendChild(row);
-
-   });
-
-
-
-   cartItems.querySelectorAll('.itemQty').forEach(inp => {
-
-    inp.addEventListener('change', e => {
-
-     const id = e.target.getAttribute('data-id');
-
-     const qty = parseInt(e.target.value || '1', 10);
-
-     updateQty(id, qty);
-
-    });
-
-   });
-
-
-
-   cartItems.querySelectorAll('.removeItem').forEach(btn => {
-
-    btn.addEventListener('click', e => removeFromCart(e.target.getAttribute('data-id')));
-
-   });
-
-
-
-   const count = cart.reduce((s,i)=>s+i.qty,0);
-
-   cartCount.textContent = count;
-
-   cartTotal.textContent = `${calcTotal().toFixed(2)} ${CURRENCY}`;
-
-  }
-
-
-
-  function openCart() {
-
-   cartDrawer.classList.remove('hidden');
-
-   document.body.style.overflow = 'hidden';
-
-  }
-
-  function closeCart() {
-
-   cartDrawer.classList.add('hidden');
-
-   document.body.style.overflow = '';
-
-  }
-
-
-
-  cartBtn.addEventListener('click', openCart);
-
-  cartOverlay.addEventListener('click', closeCart);
-
-  closeCartBtn.addEventListener('click', closeCart);
-
-
-
-  // === واتساب Checkout ===
-
-  const checkoutModal = document.getElementById('checkoutModal');
-
-  const closeCheckoutBtn = document.getElementById('closeCheckoutBtn');
-
-  const cancelCheckoutBtn = document.getElementById('cancelCheckoutBtn');
-
-  const confirmCheckoutBtn = document.getElementById('confirmCheckoutBtn');
-
-
-
-  function openCheckout() { checkoutModal.classList.remove('hidden'); }
-
-  function closeCheckout() { checkoutModal.classList.add('hidden'); }
-
-
-
-  closeCheckoutBtn.addEventListener('click', closeCheckout);
-
-  cancelCheckoutBtn.addEventListener('click', closeCheckout);
-
-
-
-  checkoutBtn.addEventListener('click', () => {
-
-   if (cart.length === 0) {
-
-    openCart();
-
-    return;
-
-   }
-
-   openCheckout();
-
-  });
-
-
-
-  async function updateSheetStock(productId, qty) {
-
- try {
-
-  const response = await fetch(SHEET_API, {
-
-   method: "POST",
-
-   headers: { "Content-Type": "application/json" },
-
-   body: JSON.stringify({ id: productId, qty: qty })
-
-  });
-
-
-
-  const data = await response.json();
-
-  console.log("✅ API Response:", data);
-
-
-
-  if (data.status === "success") {
-
- console.log(`✅ تم تحديث المخزون: المنتج ${data.id} أصبح ${data.newStock}`);
-
-} else {
-
- console.warn("⚠️ فشل تحديث المخزون:", data.message);
-
-  }
-
- } catch (err) {
-
-  console.error("❌ خطأ في استدعاء API:", err);
-
- }
-
-}
-
-
-
-  function showToast(message) {
-
-   const container = document.getElementById('toast-container');
-
-   const toast = document.createElement('div');
-
-   toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
-
-   toast.innerHTML = `✅ ${message}`;
-
-   container.appendChild(toast);
-
-   setTimeout(() => {
-
-    toast.classList.add("opacity-0", "transition-opacity");
-
-    setTimeout(() => toast.remove(), 500);
-
-   }, 3000);
-
-  }
-
-
-
-  confirmCheckoutBtn.addEventListener('click', async () => {
-
-   const name = document.getElementById('customerName').value.trim();
-
-   const phone = document.getElementById('customerPhone').value.trim();
-
-   const regionSelect = document.getElementById('customerRegion');
-
-   const region = regionSelect.options[regionSelect.selectedIndex].value;
-
-   const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].dataset.fee || 0);
-
-   const notes = document.getElementById('customerNotes').value.trim();
-
-
-
-   const orderLines = cart.map(i => {
-
-    const p = PRODUCTS.find(p => p.id === i.id);
-
-    return `• ${p.title} × ${i.qty} = ${(p.price * i.qty).toFixed(2)} ${CURRENCY}`;
-
-   }).join('\n');
-
-
-
-   const subtotal = calcTotal();
-
-   const finalTotal = (subtotal + deliveryFee).toFixed(2);
-
-
-
-   const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
-
-%0A+ رسوم التوصيل (${region}): ${deliveryFee} ${CURRENCY}
-
-%0A--------------------------------
-
-%0Aالمجموع الكلي: ${finalTotal} ${CURRENCY}
-
-%0A%0Aالاسم: ${name}
-
-%0Aالهاتف: ${phone}
-
-%0Aالملاحظات: ${notes}`;
-
-
-
-   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-
-   window.open(waUrl, '_blank');
-
-
-
-   // خصم محلي + تحديث Google Sheets
-
-   const itemsToUpdate = cart.map(c => ({...c})); // نسخة
-
-   cart.forEach(item => {
-
-    const product = PRODUCTS.find(p => p.id === item.id);
-
-    if (product) product.stock -= item.qty;
-
-   });
-
-   cart = [];
-
-   updateCartUI(false);
-
-   renderProducts(PRODUCTS);
-
-   closeCheckout();
-
-   closeCart();
-
-
-
-   // إرسال تحديثات المخزون إلى Google Sheets
-
-   console.log("itemsToUpdate =", itemsToUpdate);
-
-   for (let item of itemsToUpdate) {
-
- await updateSheetStock(item.id, item.qty);
-
-}
-
-   showToast('تم إرسال الطلب وتحديث المخزون');
-
-  });
-
-
-
-</script>
-
-<div class="fixed bottom-5 right-5 flex flex-col gap-2 z-50" id="toast-container"></div>
-
-<script>
-
-(function(){
-
- const nameInput = document.getElementById("customerName");
-
- const phoneInput = document.getElementById("customerPhone");
-
- const regionInput = document.getElementById("customerRegion");
-
- const confirmBtn = document.getElementById("confirmCheckoutBtn");
-
-
-
- function clearErrors(){
-
-  document.querySelectorAll(".error-msg.__inline").forEach(el => el.remove());
-
-  [nameInput, phoneInput, regionInput].forEach(inp => inp && inp.classList.remove("input-error","shake-once"));
-
- }
-
-
-
- function placeError(input, message){
-
-  if(!input) return;
-
-  const err = document.createElement("div");
-
-  err.className = "error-msg __inline";
-
-  err.textContent = message;
-
-  // place after input
-
-  input.insertAdjacentElement("afterend", err);
-
-  input.classList.add("input-error","shake-once");
-
-  setTimeout(()=>input.classList.remove("shake-once"), 400);
-
- }
-
-
-
- function validate(){
-
-  clearErrors();
-
-  let ok = true;
-
-  // name
-
-  if(!nameInput || nameInput.value.trim() === ""){
-
-   placeError(nameInput, "الاسم مطلوب");
-
-   ok = false;
-
-  }
-
-  // phone: 10 digits
-
-  if(!phoneInput || !/^\d{10}$/.test(phoneInput.value.trim())){
-
-   placeError(phoneInput, "رقم الهاتف يجب أن يكون 10 أرقام");
-
-   ok = false;
-
-  }
-
-  // region
-
-  if(!regionInput || !regionInput.value){
-
-   placeError(regionInput, "الرجاء اختيار المنطقة");
-
-   ok = false;
-
-  }
-
-  return ok;
-
- }
-
-
-
- // live cleanup
-
- [nameInput, phoneInput, regionInput].forEach(inp => {
-
-  if(!inp) return;
-
-  inp.addEventListener('input', ()=>{
-
-   if(inp.classList.contains('input-error')){
-
-    clearErrors();
-
-   }
-
-  });
-
-  inp.addEventListener('change', ()=>{
-
-   if(inp.classList.contains('input-error')){
-
-    clearErrors();
-
-   }
-
-  });
-
- });
-
-
-
- // Numeric-only enforcement
-
- if(phoneInput){
-
-  phoneInput.addEventListener('input', () => {
-
-   phoneInput.value = phoneInput.value.replace(/[^\d]/g, '').slice(0,10);
-
-  });
-
- }
-
-
-
- // Capturing validate before submit
-
- if(confirmBtn){
-
-  confirmBtn.addEventListener('click', function(e){
-
-   const ok = validate();
-
-   if(!ok){
-
-    e.preventDefault();
-
-    e.stopPropagation();
-
-    if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
-
-    return false;
-
-   }
-
-  }, true);
-
- }
-
-})();
-
-
-
-// تحميل المنتجات عند فتح الصفحة
-
-document.addEventListener('DOMContentLoaded', loadProducts);
-
-</script>
-
-
-
-<script>
-
-// وظيفة تضبط الـ max وتضيف "المتوفر: X" بعد ما تتبنى السلة
-
-function fixCartStock() {
-
- document.querySelectorAll(".itemQty").forEach(inp => {
-
-  const id = inp.getAttribute("data-id");
-
-  if (typeof PRODUCTS !== "undefined") {
-
-   const product = PRODUCTS.find(p => p.id === id);
-
-   if (product) {
-
-    inp.setAttribute("max", product.stock);
-
-    // لو ما في نص "المتوفر" ضيفه
-
-    if (!inp.parentElement.parentElement.querySelector(".stockInfo")) {
-
-     const stockInfo = document.createElement("p");
-
-     stockInfo.className = "stockInfo text-xs text-slate-400 mt-1";
-
-     stockInfo.innerText = `المتوفر: ${product.stock}`;
-
-     inp.parentElement.parentElement.querySelector(".flex-1").appendChild(stockInfo);
-
-    }
-
-   }
-
-  }
-
- });
-
-}
-
-
-
-// نحفظ نسخة من الدالة الأصلية
-
-const oldUpdateCartUI = updateCartUI;
-
-updateCartUI = function(open = false) {
-
- oldUpdateCartUI(open);
-
- fixCartStock();
-
-};
-
-</script>
-
-</body>
-
-</html>
-
