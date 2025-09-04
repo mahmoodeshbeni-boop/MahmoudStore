@@ -6,7 +6,19 @@
 
 
 
+
+
+
+
+
+
+
+
 <html dir="rtl" lang="ar">
+
+
+
+
 
 
 
@@ -14,7 +26,15 @@
 
 
 
+
+
+
+
 <meta charset="utf-8"/>
+
+
+
+
 
 
 
@@ -22,13 +42,27 @@
 
 
 
+
+
+
+
 <title>متجر محمود | Mahmoud Store</title>
+
+
+
+
 
 
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
 
+
+
  <link rel="icon" type="image/png" href="assets/images/iconsite.png">
+
+
+
+
 
 
 
@@ -36,7 +70,15 @@
 
 
 
+
+
+
+
 <script>
+
+
+
+
 
 
 
@@ -44,51 +86,95 @@
 
 
 
-  theme: {
 
 
 
-  extend: {
+
+ theme: {
 
 
 
-   fontFamily: { sans: ['Cairo', 'ui-sans-serif', 'system-ui'] },
 
 
 
-   colors: {
+
+ extend: {
 
 
 
-   brand: { DEFAULT: '#7c3aed', light: '#a78bfa', dark: '#6d28d9' }
 
 
 
-   },
+
+  fontFamily: { sans: ['Cairo', 'ui-sans-serif', 'system-ui'] },
 
 
 
-   boxShadow: {
 
 
 
-   glow: '0 10px 40px rgba(124,58,237,0.25)'
+
+  colors: {
 
 
 
-   },
 
 
 
-   backgroundImage: {
+
+  brand: { DEFAULT: '#7c3aed', light: '#a78bfa', dark: '#6d28d9' }
 
 
 
-   'hero-gradient': 'radial-gradient(1200px 600px at 80% -10%, rgba(124,58,237,0.35), transparent 60%), radial-gradient(1000px 500px at -20% 10%, rgba(56,189,248,0.35), transparent 60%)'
 
 
 
-   }
+
+  },
+
+
+
+
+
+
+
+  boxShadow: {
+
+
+
+
+
+
+
+  glow: '0 10px 40px rgba(124,58,237,0.25)'
+
+
+
+
+
+
+
+  },
+
+
+
+
+
+
+
+  backgroundImage: {
+
+
+
+
+
+
+
+  'hero-gradient': 'radial-gradient(1200px 600px at 80% -10%, rgba(124,58,237,0.35), transparent 60%), radial-gradient(1000px 500px at -20% 10%, rgba(56,189,248,0.35), transparent 60%)'
+
+
+
+
 
 
 
@@ -96,11 +182,31 @@
 
 
 
-  }
+
 
 
 
  }
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+ }
+
+
+
+
 
 
 
@@ -108,7 +214,15 @@
 
 
 
+
+
+
+
 // Animation for cart button
+
+
+
+
 
 
 
@@ -116,7 +230,15 @@ function animateCart() {
 
 
 
+
+
+
+
  const cartBtn = document.getElementById("cartBtn");
+
+
+
+
 
 
 
@@ -124,7 +246,15 @@ function animateCart() {
 
 
 
+
+
+
+
  cartBtn.classList.remove("cart-animate"); // reset
+
+
+
+
 
 
 
@@ -132,7 +262,15 @@ function animateCart() {
 
 
 
+
+
+
+
  cartBtn.classList.add("cart-animate");
+
+
+
+
 
 
 
@@ -140,7 +278,19 @@ function animateCart() {
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -152,7 +302,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <style>
+
+
+
+
 
 
 
@@ -160,7 +318,15 @@ function animateCart() {
 
 
 
+
+
+
+
  ::selection { background: #7c3aed22; }
+
+
+
+
 
 
 
@@ -168,7 +334,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <style>
+
+
+
+
 
 
 
@@ -176,7 +350,15 @@ function animateCart() {
 
 
 
+
+
+
+
  background-color: rgba(255, 0, 0, 0.1); /* أحمر خفيف */
+
+
+
+
 
 
 
@@ -184,7 +366,15 @@ function animateCart() {
 
 
 
+
+
+
+
  color: #000; /* النص بالأسود */
+
+
+
+
 
 
 
@@ -192,7 +382,15 @@ function animateCart() {
 
 
 
+
+
+
+
  padding: 8px 12px;
+
+
+
+
 
 
 
@@ -200,7 +398,49 @@ function animateCart() {
 
 
 
+
+
+
+
  select#customerRegion:focus {
+
+}
+
+
+
+
+
+select#paymentMethod {
+
+ background-color: rgba(255, 0, 0, 0.1); /* أحمر خفيف */
+
+ border: 1px solid rgba(255, 0, 0, 0.3);
+
+ color: #000; /* النص بالأسود */
+
+ border-radius: 12px;
+
+ padding: 8px 12px;
+
+}
+
+
+
+select#paymentMethod:focus {
+
+ background-color: rgba(255, 0, 0, 0.2); /* أوضح عند التركيز */
+
+ outline: none;
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -208,7 +448,15 @@ function animateCart() {
 
 
 
+
+
+
+
  outline: none;
+
+
+
+
 
 
 
@@ -216,11 +464,23 @@ function animateCart() {
 
 
 
+
+
+
+
 </style>
 
 
 
+
+
+
+
 <style>
+
+
+
+
 
 
 
@@ -228,7 +488,15 @@ function animateCart() {
 
 
 
+
+
+
+
  0%, 100% { transform: translateY(0); }
+
+
+
+
 
 
 
@@ -236,7 +504,15 @@ function animateCart() {
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -244,7 +520,15 @@ function animateCart() {
 
 
 
+
+
+
+
  animation: cart-bounce 0.4s ease;
+
+
+
+
 
 
 
@@ -252,11 +536,23 @@ function animateCart() {
 
 
 
+
+
+
+
 </style>
 
 
 
+
+
+
+
 <style>
+
+
+
+
 
 
 
@@ -264,7 +560,15 @@ function animateCart() {
 
 
 
+
+
+
+
 @keyframes subtle-shake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-4px)} 40%{transform:translateX(4px)} 60%{transform:translateX(-3px)} 80%{transform:translateX(3px)}}
+
+
+
+
 
 
 
@@ -272,11 +576,23 @@ function animateCart() {
 
 
 
+
+
+
+
 .error-msg{font-size: .825rem; color: #ef4444; margin-top: .25rem;}
 
 
 
+
+
+
+
 </style>
+
+
+
+
 
 
 
@@ -284,7 +600,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <body class="font-sans bg-slate-950 text-slate-50 selection:bg-brand/20">
+
+
+
+
 
 
 
@@ -292,7 +616,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <header class="sticky top-0 z-30 backdrop-blur bg-slate-950/70 border-b border-white/10">
+
+
+
+
 
 
 
@@ -300,7 +632,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="flex items-center gap-3">
+
+
+
+
 
 
 
@@ -308,7 +648,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <span class="text-lg font-semibold">متجر محمود</span>
+
+
+
+
 
 
 
@@ -316,13 +664,27 @@ function animateCart() {
 
 
 
+
+
+
+
 <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+
+
 
 </nav>
 
+
+
 <button id="menuToggle" aria-controls="mobileMenu" aria-expanded="false" class="md:hidden px-3 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition focus:outline-none">القائمة ☰</button>
 
+
+
 <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+
+
+
+
 
 
 
@@ -330,7 +692,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <a href="delivery.html" class="hover:text-brand">أسعار التوصيل</a>
+
+
+
+
 
 
 
@@ -338,7 +708,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </nav>
+
+
+
+
 
 
 
@@ -346,7 +724,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <span class="material">🛒</span>
+
+
+
+
 
 
 
@@ -354,7 +740,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <span class="absolute -top-2 -left-2 text-xs bg-brand text-white w-6 h-6 rounded-full grid place-content-center" id="cartCount">0</span>
+
+
+
+
 
 
 
@@ -362,25 +756,51 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
 <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-slate-950/90 backdrop-blur px-4 py-3">
 
+
+
  <div class="flex flex-col gap-3 text-sm text-slate-300">
 
-  <a href="#products" class="hover:text-white">المنتجات</a>
 
-  <a href="delivery.html" class="hover:text-white">أسعار التوصيل</a>
 
-  <a href="aboutus.html" class="hover:text-white">من نحن</a>
+ <a href="#products" class="hover:text-white">المنتجات</a>
+
+
+
+ <a href="delivery.html" class="hover:text-white">أسعار التوصيل</a>
+
+
+
+ <a href="aboutus.html" class="hover:text-white">من نحن</a>
+
+
 
  </div>
 
+
+
 </div>
 
+
+
 </header>
+
+
+
+
 
 
 
@@ -388,7 +808,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <section class="bg-hero-gradient">
+
+
+
+
 
 
 
@@ -396,7 +824,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div>
+
+
+
+
 
 
 
@@ -404,7 +840,15 @@ function animateCart() {
 
 
 
-   أهلاً بك في <span class="text-transparent bg-clip-text bg-gradient-to-l from-cyan-400 to-brand">متجر محمود</span>
+
+
+
+
+  أهلاً بك في <span class="text-transparent bg-clip-text bg-gradient-to-l from-cyan-400 to-brand">متجر محمود</span>
+
+
+
+
 
 
 
@@ -412,7 +856,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <p class="mt-4 text-slate-300 md:text-lg">تسوق منتجاتنا المختارة بجودة عالية وخدمة توصيل سريعة داخل ليبيا.</p>
+
+
+
+
 
 
 
@@ -420,7 +872,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <a class="px-5 py-3 rounded-2xl bg-brand hover:bg-brand/90 transition shadow-glow" href="#products">تصفح المنتجات</a>
+
+
+
+
 
 
 
@@ -428,11 +888,23 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -440,7 +912,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="aspect-[4/3] rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-glow overflow-hidden">
+
+
+
+
 
 
 
@@ -448,7 +928,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -456,7 +944,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="px-4 py-3 rounded-2xl bg-white/10 ring-1 ring-white/10 backdrop-blur">
+
+
+
+
 
 
 
@@ -464,11 +960,7 @@ function animateCart() {
 
 
 
-</div>
 
-
-
-</div>
 
 
 
@@ -476,11 +968,39 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 
 
 
 </section>
+
+
+
+
 
 
 
@@ -488,7 +1008,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <section class="max-w-6xl mx-auto px-4 py-12" id="products">
+
+
+
+
 
 
 
@@ -496,7 +1024,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div>
+
+
+
+
 
 
 
@@ -504,11 +1040,23 @@ function animateCart() {
 
 
 
+
+
+
+
 <p class="text-slate-300 text-sm md:text-base">اختر الكمية ثم أضف للسلة — الأسعار بالدينار الليبي (LYD)</p>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -516,7 +1064,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <label class="text-sm text-slate-300">بحث: </label>
+
+
+
+
 
 
 
@@ -524,11 +1080,23 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -536,7 +1104,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </section>
+
+
+
+
 
 
 
@@ -544,7 +1120,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <section class="max-w-6xl mx-auto px-4 pb-16" id="about">
+
+
+
+
 
 
 
@@ -552,7 +1136,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <h3 class="text-xl font-semibold mb-2">عن المتجر</h3>
+
+
+
+
 
 
 
@@ -560,7 +1152,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -568,7 +1168,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <!-- Footer -->
+
+
+
+
 
 
 
@@ -576,11 +1184,23 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
 
 
 
+
+
+
+
 <div>
+
+
+
+
 
 
 
@@ -588,7 +1208,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <p class="text-slate-300 text-sm mt-2">طرابلس، ليبيا</p>
+
+
+
+
 
 
 
@@ -596,7 +1224,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div>
+
+
+
+
 
 
 
@@ -604,11 +1240,23 @@ function animateCart() {
 
 
 
+
+
+
+
 <p class="text-slate-300 text-sm">واتساب: <span class="text-white font-mono">+218913077275</span></p>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -616,7 +1264,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <p class="font-semibold mb-2">روابط سريعة</p>
+
+
+
+
 
 
 
@@ -624,7 +1280,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <a class="hover:text-white" href="https://www.tiktok.com/@mahmoud4ads">TIKTOK</a>
+
+
+
+
 
 
 
@@ -632,19 +1296,39 @@ function animateCart() {
 
 
 
+
+
+
+
 <a class="hover:text-white" href="https://www.facebook.com/mahmoud4ads">FACEBOOK</a>
 
 
 
-</div>
 
-
-
-</div>
 
 
 
 </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 
 
 
@@ -652,7 +1336,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </footer>
+
+
+
+
 
 
 
@@ -660,7 +1352,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="fixed inset-0 z-40 hidden" id="cartDrawer">
+
+
+
+
 
 
 
@@ -668,7 +1368,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <aside class="absolute top-0 right-0 h-full w-full max-w-md bg-slate-900 ring-1 ring-white/10 shadow-2xl p-6 flex flex-col">
+
+
+
+
 
 
 
@@ -676,7 +1384,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <h3 class="text-xl font-semibold">السلة</h3>
+
+
+
+
 
 
 
@@ -684,7 +1400,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -692,7 +1416,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="pt-4 space-y-3 border-t border-white/10">
+
+
+
+
 
 
 
@@ -700,7 +1432,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <span class="text-slate-300">المجموع</span>
+
+
+
+
 
 
 
@@ -708,15 +1448,31 @@ function animateCart() {
 
 
 
-</div>
 
-
-
-<button class="w-full px-4 py-3 rounded-2xl bg-brand hover:bg-brand/90 transition shadow-glow" id="checkoutBtn">إتمام الطلب عبر واتساب</button>
 
 
 
 </div>
+
+
+
+
+
+
+
+<button class="w-full px-4 py-3 rounded-2xl bg-brand hover:bg-brand/90 transition shadow-glow" id="checkoutBtn">إتمام الطلب</button>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 
 
 
@@ -724,7 +1480,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -732,7 +1496,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="fixed inset-0 z-50 hidden" id="checkoutModal">
+
+
+
+
 
 
 
@@ -740,7 +1512,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="absolute inset-0 flex items-center justify-center p-4">
+
+
+
+
 
 
 
@@ -748,11 +1528,23 @@ function animateCart() {
 
 
 
+
+
+
+
 <div class="flex items-center justify-between mb-4">
 
 
 
-<h4 class="text-lg font-semibold">بيانات التوصيل       - شركة التوصيل : VANEX</h4>
+
+
+
+
+<h4 class="text-lg font-semibold">بيانات التوصيل    - شركة التوصيل : VANEX</h4>
+
+
+
+
 
 
 
@@ -760,7 +1552,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -768,7 +1568,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <input class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerName" placeholder="الاسم الكامل"/>
+
+
+
+
 
 
 
@@ -776,7 +1584,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <select class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none w-full text-right pr-16" id="customerRegion">
+
+
+
+
 
 
 
@@ -784,7 +1600,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="السياحية">السياحية — 15 LYD</option>
+
+
+
+
 
 
 
@@ -792,7 +1616,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="الظهرة">الظهرة — 15 LYD</option>
+
+
+
+
 
 
 
@@ -800,7 +1632,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="النوفليين">النوفليين — 15 LYD</option>
+
+
+
+
 
 
 
@@ -808,7 +1648,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="شارع الجرابة">شارع الجرابة — 15 LYD</option>
+
+
+
+
 
 
 
@@ -816,7 +1664,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="شارع الجمهورية">شارع الجمهورية — 15 LYD</option>
+
+
+
+
 
 
 
@@ -824,7 +1680,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="باب بن غشير">باب بن غشير — 15 LYD</option>
+
+
+
+
 
 
 
@@ -832,7 +1696,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="غوط الشعال">غوط الشعال — 15 LYD</option>
+
+
+
+
 
 
 
@@ -840,7 +1712,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="الدريبي">الدريبي — 15 LYD</option>
+
+
+
+
 
 
 
@@ -848,7 +1728,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="قدح">قدح — 15 LYD</option>
+
+
+
+
 
 
 
@@ -856,7 +1744,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="الرياضية">الرياضية — 15 LYD</option>
+
+
+
+
 
 
 
@@ -864,7 +1760,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="غرغور">غرغور — 15 LYD</option>
+
+
+
+
 
 
 
@@ -872,7 +1776,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="طريق المطار">طريق المطار — 20 LYD</option>
+
+
+
+
 
 
 
@@ -880,7 +1792,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="صلاح الدين">صلاح الدين — 15 LYD</option>
+
+
+
+
 
 
 
@@ -888,7 +1808,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="طريق الشوك">طريق الشوك — 15 LYD</option>
+
+
+
+
 
 
 
@@ -896,7 +1824,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="الحي الجامعي">الحي الجامعي — 15 LYD</option>
+
+
+
+
 
 
 
@@ -904,7 +1840,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="راس حسن">راس حسن — 15 LYD</option>
+
+
+
+
 
 
 
@@ -912,7 +1856,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="جامع الصقع">جامع الصقع — 15 LYD</option>
+
+
+
+
 
 
 
@@ -920,7 +1872,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="عرادة">عرادة — 15 LYD</option>
+
+
+
+
 
 
 
@@ -928,7 +1888,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="سوق الجمعة">سوق الجمعة — 15 LYD</option>
+
+
+
+
 
 
 
@@ -936,7 +1904,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="الغرارات">الغرارات — 15 LYD</option>
+
+
+
+
 
 
 
@@ -944,7 +1920,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="طريق الشط">طريق الشط — 15 LYD</option>
+
+
+
+
 
 
 
@@ -952,7 +1936,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="11 يونيو">11 يونيو — 15 LYD</option>
+
+
+
+
 
 
 
@@ -960,7 +1952,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="طريق المشتل">طريق المشتل — 20 LYD</option>
+
+
+
+
 
 
 
@@ -968,11 +1968,23 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="ولي العهد">ولي العهد — 20 LYD</option>
 
 
 
+
+
+
+
 <option data-fee="20" value="السدرة">السدرة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -980,7 +1992,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="طريق السور">طريق السور — 15 LYD</option>
+
+
+
+
 
 
 
@@ -988,7 +2008,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="غابة النصر">غابة النصر — 15 LYD</option>
+
+
+
+
 
 
 
@@ -996,7 +2024,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="فشلوم">فشلوم — 15 LYD</option>
+
+
+
+
 
 
 
@@ -1004,7 +2040,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="15" value="عمر المختار">عمر المختار — 15 LYD</option>
+
+
+
+
 
 
 
@@ -1012,7 +2056,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="بنغازي">بنغازي — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1020,7 +2072,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="بوزغيبة">بوزغيبة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1028,7 +2088,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="شبنة">شبنة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1036,7 +2104,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الماجوري">الماجوري — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1044,7 +2120,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="البركة">البركة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1052,7 +2136,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="أرض لملوم">أرض لملوم — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1060,7 +2152,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الوحيشي">الوحيشي — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1068,7 +2168,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="ارض الحراسة">ارض الحراسة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1076,7 +2184,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الرحبة">الرحبة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1084,7 +2200,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="بوهديمة">بوهديمة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1092,7 +2216,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الفويهات">الفويهات — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1100,7 +2232,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="بوعطني">بوعطني — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1108,7 +2248,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="قاريونس">قاريونس — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1116,7 +2264,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="بنينا">بنينا — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1124,7 +2280,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="سيدي خليفة">سيدي خليفة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1132,7 +2296,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الفعكات">الفعكات — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1140,7 +2312,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الكيش">الكيش — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1148,7 +2328,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="شارع فينيسيا">شارع فينيسيا — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1156,7 +2344,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الرجمة">الرجمة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1164,7 +2360,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="المقزحة">المقزحة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1172,7 +2376,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="سيدي فرج">سيدي فرج — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1180,7 +2392,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الصابري">الصابري — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1188,7 +2408,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الرويسات - بنغازي">الرويسات - بنغازي — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1196,7 +2424,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="حي الفاتح">حي الفاتح — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1204,7 +2440,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="السيدة عائشة">السيدة عائشة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1212,7 +2456,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="سبها">سبها — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1220,7 +2472,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="شارع بنغازي">شارع بنغازي — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1228,7 +2488,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الجامع العالي">الجامع العالي — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1236,7 +2504,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="شارع الاذاعة">شارع الاذاعة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1244,7 +2520,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="شارع مالطا">شارع مالطا — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1252,7 +2536,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="شارع المطبات">شارع المطبات — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1260,7 +2552,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الجزيرة">الجزيرة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1268,7 +2568,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="كرزاز">كرزاز — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1276,7 +2584,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="طريق المطار">طريق المطار — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1284,7 +2600,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الكراريم">الكراريم — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1292,7 +2616,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="قصر حمد">قصر حمد — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1300,7 +2632,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الجهانات">الجهانات — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1308,7 +2648,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الشراكسة">الشراكسة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1316,7 +2664,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="القدارية">القدارية — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1324,7 +2680,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السواوة">السواوة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1332,7 +2696,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السِكت">السِكت — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1340,7 +2712,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السكيرات">السكيرات — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1348,7 +2728,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الملايطة">الملايطة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1356,7 +2744,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الرملة">الرملة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1364,7 +2760,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="يدر">يدر — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1372,7 +2776,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="المنقوش">المنقوش — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1380,7 +2792,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الدافنية">الدافنية — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1388,7 +2808,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="شارع بازينة">شارع بازينة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1396,7 +2824,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="المقاصبة">المقاصبة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1404,7 +2840,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="راس السايح">راس السايح — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1412,7 +2856,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="راس التوتة">راس التوتة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1420,7 +2872,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الخروبة">الخروبة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1428,7 +2888,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="دائري إقزير">دائري إقزير — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1436,7 +2904,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الرويسات - مصراتة">الرويسات - مصراتة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1444,7 +2920,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السكت">السكت — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1452,7 +2936,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السواطي">السواطي — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1460,7 +2952,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="النباك">النباك — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1468,7 +2968,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الزاوية">الزاوية — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1476,7 +2984,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="صرمان">صرمان — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1484,7 +3000,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="العجيلات">العجيلات — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1492,7 +3016,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الجميل">الجميل — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1500,7 +3032,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="زلطن">زلطن — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1508,7 +3048,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="القره بوللي">القره بوللي — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1516,7 +3064,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="الخمس">الخمس — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1524,7 +3080,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="بن جواد">بن جواد — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1532,7 +3096,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="ترهونة">ترهونة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1540,7 +3112,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="راس لانوف">راس لانوف — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1548,7 +3128,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="إجدابيا">إجدابيا — 30 LYD</option>
+
+
+
+
 
 
 
@@ -1556,7 +3144,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="دريانة">دريانة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1564,7 +3160,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="توكرة">توكرة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1572,7 +3176,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="سي بوزيد">سي بوزيد — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1580,7 +3192,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="تاكنس">تاكنس — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1588,7 +3208,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="البنية">البنية — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1596,7 +3224,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="مدور الزيتون">مدور الزيتون — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1604,7 +3240,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="بطة">بطة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1612,7 +3256,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="المرج الوسط">المرج الوسط — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1620,7 +3272,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="مراوة">مراوة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1628,7 +3288,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الغريقة">الغريقة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1636,7 +3304,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="سلتونة">سلتونة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1644,7 +3320,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الحمامة">الحمامة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1652,7 +3336,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الوسيطة">الوسيطة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1660,7 +3352,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الفايدية">الفايدية — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1668,7 +3368,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="طبرق">طبرق — 45 LYD</option>
+
+
+
+
 
 
 
@@ -1676,7 +3384,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الاصابعة">الاصابعة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1684,7 +3400,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="جادو">جادو — 45 LYD</option>
+
+
+
+
 
 
 
@@ -1692,7 +3416,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="40" value="براك الشاطئ">براك الشاطئ — 40 LYD</option>
+
+
+
+
 
 
 
@@ -1700,7 +3432,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="السواني">السواني — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1708,7 +3448,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="40" value="درنة">درنة — 40 LYD</option>
+
+
+
+
 
 
 
@@ -1716,7 +3464,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="كرسة">كرسة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1724,7 +3480,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="مرتوبة">مرتوبة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1732,7 +3496,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="حي القاعدة الجوية">حي القاعدة الجوية — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1740,7 +3512,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="ام الرزم">ام الرزم — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1748,7 +3528,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="خليج البمبة">خليج البمبة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1756,7 +3544,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="العزيات">العزيات — 45 LYD</option>
+
+
+
+
 
 
 
@@ -1764,7 +3560,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="درنة الوسط">درنة الوسط — 35 LYD</option>
+
+
+
+
 
 
 
@@ -1772,7 +3576,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="مطرد">مطرد — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1780,7 +3592,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="وادي الربيع">وادي الربيع — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1788,7 +3608,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="تيجي">تيجي — 45 LYD</option>
+
+
+
+
 
 
 
@@ -1796,7 +3624,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="مرزق">مرزق — 45 LYD</option>
+
+
+
+
 
 
 
@@ -1804,7 +3640,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="طرابلس تسليم نسائي">طرابلس تسليم نسائي — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1812,7 +3656,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="حي الأندلس">حي الأندلس — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1820,7 +3672,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="زاوية الدهماني">زاوية الدهماني — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1828,7 +3688,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="بن عاشور">بن عاشور — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1836,7 +3704,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="شارع الزاوية">شارع الزاوية — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1844,7 +3720,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="شارع النصر">شارع النصر — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1852,7 +3736,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="قرقارش">قرقارش — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1860,7 +3752,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="السراج">السراج — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1868,7 +3768,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="قرجي">قرجي — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1876,7 +3784,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="أبوسليم">أبوسليم — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1884,7 +3800,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="الفلاح">الفلاح — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1892,7 +3816,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="حي الزهور">حي الزهور — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1900,7 +3832,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="الهضبة">الهضبة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1908,7 +3848,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="خلة الفرجان">خلة الفرجان — 25 LYD</option>
+
+
+
+
 
 
 
@@ -1916,7 +3864,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="الفرناج">الفرناج — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1924,7 +3880,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="سيدي المصري">سيدي المصري — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1932,7 +3896,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="زناتة">زناتة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1940,7 +3912,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="الهاني">الهاني — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1948,7 +3928,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="الحشان">الحشان — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1956,7 +3944,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="كشلاف">كشلاف — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1964,7 +3960,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="بوستة">بوستة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1972,7 +3976,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="معيتيقة">معيتيقة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1980,7 +3992,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="السبعة">السبعة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1988,7 +4008,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="حي دمشق">حي دمشق — 20 LYD</option>
+
+
+
+
 
 
 
@@ -1996,7 +4024,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="السدرة">السدرة — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2004,7 +4040,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="طريق السور">طريق السور — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2012,7 +4056,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="غابة النصر">غابة النصر — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2020,7 +4072,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="50" value="غات">غات — 50 LYD</option>
+
+
+
+
 
 
 
@@ -2028,7 +4088,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="السبيعة">السبيعة — 25 LYD</option>
+
+
+
+
 
 
 
@@ -2036,7 +4104,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="ورشفانة الزهراء">ورشفانة الزهراء — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2044,7 +4120,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="ورشفانة العزيزية">ورشفانة العزيزية — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2052,7 +4136,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="مصراتة تسليم نسائي">مصراتة تسليم نسائي — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2060,7 +4152,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="20" value="تسليم بفرع بنغازي">تسليم بفرع بنغازي — 20 LYD</option>
+
+
+
+
 
 
 
@@ -2068,7 +4168,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="مسلاتة">مسلاتة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2076,7 +4184,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="أم الارانب">أم الارانب — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2084,7 +4200,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="40" value="سوسة">سوسة — 40 LYD</option>
+
+
+
+
 
 
 
@@ -2092,7 +4216,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="50" value="جالو">جالو — 50 LYD</option>
+
+
+
+
 
 
 
@@ -2100,7 +4232,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="إجخرة">إجخرة — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2108,7 +4248,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="50" value="الكفرة">الكفرة — 50 LYD</option>
+
+
+
+
 
 
 
@@ -2116,7 +4264,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="الجوش">الجوش — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2124,7 +4280,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الرابطة">الرابطة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2132,7 +4296,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="العوينية">العوينية — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2140,7 +4312,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="أولاد محمود">أولاد محمود — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2148,7 +4328,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="كاباو">كاباو — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2156,7 +4344,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="الحوامد">الحوامد — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2164,7 +4360,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="تكويت">تكويت — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2172,7 +4376,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="ككلة">ككلة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2180,7 +4392,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="سوكنة">سوكنة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2188,7 +4408,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="45" value="زلة">زلة — 45 LYD</option>
+
+
+
+
 
 
 
@@ -2196,7 +4424,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="8" value="تسليم بفرع عين زارة">تسليم بفرع عين زارة — 8 LYD</option>
+
+
+
+
 
 
 
@@ -2204,7 +4440,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="55" value="القطرون">القطرون — 55 LYD</option>
+
+
+
+
 
 
 
@@ -2212,7 +4456,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="الشويرف">الشويرف — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2220,7 +4472,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="25" value="تسليم بفرع البيضاء">تسليم بفرع البيضاء — 25 LYD</option>
+
+
+
+
 
 
 
@@ -2228,7 +4488,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="8" value="تسليم بفرع سوق الجمعة">تسليم بفرع سوق الجمعة — 8 LYD</option>
+
+
+
+
 
 
 
@@ -2236,7 +4504,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="50" value="امساعد">امساعد — 50 LYD</option>
+
+
+
+
 
 
 
@@ -2244,7 +4520,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="50" value="بئر الأشهب">بئر الأشهب — 50 LYD</option>
+
+
+
+
 
 
 
@@ -2252,7 +4536,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="مزدة">مزدة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2260,7 +4552,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="10" value="بوكس HT Mall">بوكس HT Mall — 10 LYD</option>
+
+
+
+
 
 
 
@@ -2268,7 +4568,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="الطلحية">الطلحية — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2276,7 +4584,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="جروثة">جروثة — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2284,7 +4600,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="30" value="النواقية">النواقية — 30 LYD</option>
+
+
+
+
 
 
 
@@ -2292,7 +4616,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="بئر غنم">بئر غنم — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2300,7 +4632,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <option data-fee="35" value="بئر هويسة">بئر هويسة — 35 LYD</option>
+
+
+
+
 
 
 
@@ -2308,7 +4648,31 @@ function animateCart() {
 
 
 
+<!-- ✅ اختيار طريقة الدفع -->
+
+<select class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none w-full text-right pr-16" id="paymentMethod">
+
+ <option value="" selected disabled>اختر طريقة الدفع</option>
+
+ <option value="cash">كاش ( عدم قبول فئة 20 - 5 القديمة )</option>
+
+ <option value="online">تحويل مصرفي</option>
+
+</select>
+
+
+
+
+
+
+
+
+
 <!-- مكتبة Choices.js -->
+
+
+
+
 
 
 
@@ -2316,7 +4680,15 @@ function animateCart() {
 
 
 
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+
+
 
 
 
@@ -2324,7 +4696,15 @@ function animateCart() {
 
 
 
+
+
+
+
 /* تعديل شكل الـ select ليبقى مثل زرّك الأول */
+
+
+
+
 
 
 
@@ -2332,7 +4712,15 @@ function animateCart() {
 
 
 
+
+
+
+
  background-color: rgba(255,255,255,0.1) !important;
+
+
+
+
 
 
 
@@ -2340,7 +4728,15 @@ function animateCart() {
 
 
 
+
+
+
+
  border: 1px solid rgba(255,255,255,0.1) !important; /* نفس ring */
+
+
+
+
 
 
 
@@ -2348,7 +4744,15 @@ function animateCart() {
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -2356,7 +4760,15 @@ function animateCart() {
 
 
 
+
+
+
+
  background: transparent !important;
+
+
+
+
 
 
 
@@ -2364,7 +4776,15 @@ function animateCart() {
 
 
 
+
+
+
+
  min-height: auto !important;
+
+
+
+
 
 
 
@@ -2372,7 +4792,15 @@ function animateCart() {
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -2380,11 +4808,23 @@ function animateCart() {
 
 
 
+
+
+
+
  color: white !important;
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -2392,7 +4832,15 @@ function animateCart() {
 
 
 
+
+
+
+
  background: rgba(0,0,0,0.9) !important; /* القائمة السوداء */
+
+
+
+
 
 
 
@@ -2400,7 +4848,15 @@ function animateCart() {
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -2408,11 +4864,23 @@ function animateCart() {
 
 
 
+
+
+
+
  color: white !important;
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -2420,7 +4888,15 @@ function animateCart() {
 
 
 
+
+
+
+
  background: rgba(255,255,255,0.2) !important;
+
+
+
+
 
 
 
@@ -2428,7 +4904,15 @@ function animateCart() {
 
 
 
+
+
+
+
 </style>
+
+
+
+
 
 
 
@@ -2436,7 +4920,15 @@ function animateCart() {
 
 
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
 
 
 
@@ -2448,7 +4940,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
  new Choices(regionSelect, {
+
+
+
+
 
 
 
@@ -2456,7 +4960,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  itemSelectText: '',
+
+
+
+
 
 
 
@@ -2464,7 +4976,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  searchPlaceholderValue: "اكتب للبحث...",
+
+
+
+
 
 
 
@@ -2472,7 +4992,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
 });
+
+
+
+
 
 
 
@@ -2480,11 +5008,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
 <textarea class="px-3 py-2 rounded-xl bg-white/10 ring-1 ring-white/10 focus:bg-white/20 outline-none" id="customerNotes" placeholder="اقرب نقطه دالة (مع كتابة اي ملاحظات)" rows="3"></textarea>
 
 
 
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -2492,7 +5032,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
 <button class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" id="cancelCheckoutBtn">إلغاء</button>
+
+
+
+
 
 
 
@@ -2500,7 +5048,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  تأكيد وإرسال على واتساب
+
+
+
+
 
 
 
@@ -2508,11 +5064,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-</div>
 
-
-
-</div>
 
 
 
@@ -2520,7 +5072,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
 </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
 
 
 
@@ -2528,7 +5104,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  // === إعدادات ثابتة ===
+
+
+
+
 
 
 
@@ -2536,7 +5120,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  const CURRENCY = 'دينار ليبي';
+
+
+
+
 
 
 
@@ -2548,11 +5140,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
  // === حالة التطبيق ===
 
 
 
+
+
+
+
  let PRODUCTS = [];
+
+
+
+
 
 
 
@@ -2564,7 +5172,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
  const grid = document.getElementById('productsGrid');
+
+
+
+
 
 
 
@@ -2576,7 +5196,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
  // === تحميل المنتجات من Google Sheets ===
+
+
+
+
 
 
 
@@ -2584,75 +5216,155 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  try {
 
 
 
-  const res = await fetch(SHEET_API, { cache: 'no-store' });
+
+ try {
 
 
 
-  const data = await res.json();
 
 
 
-  // تأكد من الأشكال وتحويل price/stock للأرقام
+
+ const res = await fetch(SHEET_API, { cache: 'no-store' });
 
 
 
-  PRODUCTS = (Array.isArray(data) ? data : []).map(p => ({
 
 
 
-   id: String(p.id),
+
+ const data = await res.json();
 
 
 
-   title: p.title || '',
 
 
 
-   description: p.description || '',
+
+ // تأكد من الأشكال وتحويل price/stock للأرقام
 
 
 
-   image: p.image || '',
 
 
 
-   price: Number(p.price) || 0,
+
+ PRODUCTS = (Array.isArray(data) ? data : []).map(p => ({
 
 
 
-   stock: Number(p.stock) || 0
 
 
 
-  }));
+
+  id: String(p.id),
 
 
 
-  renderProducts(PRODUCTS);
 
 
 
-  } catch (err) {
+
+  title: p.title || '',
 
 
 
-  console.error('فشل جلب المنتجات من Google Sheets:', err);
 
 
 
-  grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">تعذر تحميل المنتجات من Google Sheets</div>';
+
+  description: p.description || '',
 
 
 
-  }
+
+
+
+
+  image: p.image || '',
+
+
+
+
+
+
+
+  price: Number(p.price) || 0,
+
+
+
+
+
+
+
+  stock: Number(p.stock) || 0
+
+
+
+
+
+
+
+ }));
+
+
+
+
+
+
+
+ renderProducts(PRODUCTS);
+
+
+
+
+
+
+
+ } catch (err) {
+
+
+
+
+
+
+
+ console.error('فشل جلب المنتجات من Google Sheets:', err);
+
+
+
+
+
+
+
+ grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">تعذر تحميل المنتجات من Google Sheets</div>';
+
+
+
+
 
 
 
  }
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
 
 
 
@@ -2664,327 +5376,291 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
  function renderProducts(list) {
 
 
 
-  grid.innerHTML = '';
 
 
 
-  list.forEach(prod => {
 
+ grid.innerHTML = '';
 
 
-  const card = document.createElement('div');
 
 
 
-  card.className = 'rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden flex flex-col';
 
 
+ list.forEach(prod => {
 
-  card.innerHTML = `
 
 
 
-   <div class="aspect-[4/3] overflow-hidden">
 
 
 
-   <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover">
+ const card = document.createElement('div');
 
 
 
-   </div>
 
 
 
-   <div class="p-5 flex-1 flex flex-col gap-3">
 
+ card.className = 'rounded-3xl bg-white/5 ring-1 ring-white/10 overflow-hidden flex flex-col';
 
 
-   <h3 class="text-lg font-semibold">${prod.title}</h3>
 
 
 
-   <p class="text-slate-300 text-sm">${prod.description}</p>
 
 
+ card.innerHTML = `
 
-   <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
 
 
 
-    الكمية: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
 
 
 
-   </p>
+  <div class="aspect-[4/3] overflow-hidden">
 
 
 
-   <div class="mt-auto flex items-center justify-between">
 
 
 
-    <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
 
+  <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover">
 
 
-    <div class="flex items-center gap-2">
 
 
 
-    <input type="number" min="1" max="${prod.stock}" value="1"
 
 
+  </div>
 
-     class="qty w-20 px-3 py-2 text-sm rounded-xl bg-white/10 ring-1 ring-white/10"
 
 
 
-     ${prod.stock === 0 ? "disabled" : ""}>
 
 
 
-    <button data-id="${prod.id}"
+  <div class="p-5 flex-1 flex flex-col gap-3">
 
 
 
-     class="addToCart px-4 py-2 rounded-xl transition ${prod.stock === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-brand hover:bg-brand/90'}"
 
 
 
-     ${prod.stock === 0 ? 'disabled' : ''}>
 
+  <h3 class="text-lg font-semibold">${prod.title}</h3>
 
 
-     ${prod.stock > 0 ? 'إضافة' : 'نفد'}
 
 
 
-    </button>
 
 
+  <p class="text-slate-300 text-sm">${prod.description}</p>
 
-    </div>
 
 
 
-   </div>
 
 
 
-   </div>
+  <p class="text-sm font-medium ${prod.stock > 0 ? 'text-green-400' : 'text-red-500'}">
 
 
 
-  `;
 
 
 
-  grid.appendChild(card);
 
+  الكمية: ${prod.stock} ${prod.stock > 0 ? 'قطعة' : 'غير متوفر'}
 
 
-  });
 
 
 
 
 
+  </p>
 
 
-  // ربط أزرار الإضافة بعد الرسم
 
 
 
-  document.querySelectorAll('.addToCart').forEach(btn => {
 
 
+  <div class="mt-auto flex items-center justify-between">
 
-  btn.addEventListener('click', (e) => {
 
 
 
-   const id = e.currentTarget.getAttribute('data-id');
 
 
 
-   const cardEl = e.currentTarget.closest('.rounded-3xl');
+  <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
 
 
 
-   const qtyEl = cardEl ? cardEl.querySelector('.qty') : null;
 
 
 
-   let qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
 
+  <div class="flex items-center gap-2">
 
 
-   if (isNaN(qty) || qty < 1) qty = 1;
 
 
 
 
 
+  <input type="number" min="1" max="${prod.stock}" value="1"
 
 
-   const product = PRODUCTS.find(p => String(p.id) === String(id));
 
 
 
-   if (!product) return;
 
 
+   class="qty w-20 px-3 py-2 text-sm rounded-xl bg-white/10 ring-1 ring-white/10"
 
 
 
 
 
-   if (qty > product.stock) {
 
 
+   ${prod.stock === 0 ? "disabled" : ""}>
 
-   alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
 
 
 
-   if (qtyEl) qtyEl.value = product.stock > 0 ? product.stock : 1;
 
 
 
-   return;
+  <button data-id="${prod.id}"
 
 
 
-   }
 
 
 
 
+   class="addToCart px-4 py-2 rounded-xl transition ${prod.stock === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-brand hover:bg-brand/90'}"
 
 
 
-   addToCart(product.id, qty);
 
 
 
-   showToast(`تمت إضافة ${qty} × ${product.title} إلى السلة`);
 
+   ${prod.stock === 0 ? 'disabled' : ''}>
 
 
-   animateCart();
 
 
 
-   const cartBtn = document.getElementById("cartBtn");
 
 
+   ${prod.stock > 0 ? 'إضافة' : 'نفد'}
 
-   if (cartBtn) {
 
 
 
-   cartBtn.classList.add("cart-animate");
 
 
 
-   setTimeout(() => cartBtn.classList.remove("cart-animate"), 400);
+  </button>
 
 
 
-   }
 
 
 
-  });
 
+  </div>
 
 
-  });
 
 
 
- }
 
 
+  </div>
 
 
 
 
 
- // بحث
 
 
+  </div>
 
- if (searchInput) {
 
 
 
-  searchInput.addEventListener('input', (e) => {
 
 
 
-  const q = e.target.value.trim();
+ `;
 
 
 
-  const filtered = PRODUCTS.filter(p => p.title.includes(q) || p.description.includes(q));
 
 
 
-  renderProducts(filtered);
 
+ grid.appendChild(card);
 
 
-  });
 
 
 
- }
 
 
+ });
 
 
 
 
 
- // === عمليات السلة ===
 
 
 
- const cartDrawer = document.getElementById('cartDrawer');
 
 
 
- const cartOverlay = document.getElementById('cartOverlay');
 
 
 
- const cartBtn = document.getElementById('cartBtn');
 
+ // ربط أزرار الإضافة بعد الرسم
 
 
- const closeCartBtn = document.getElementById('closeCartBtn');
 
 
 
- const cartItems = document.getElementById('cartItems');
 
 
+ document.querySelectorAll('.addToCart').forEach(btn => {
 
- const cartCount = document.getElementById('cartCount');
 
 
 
- const cartTotal = document.getElementById('cartTotal');
 
 
 
- const checkoutBtn = document.getElementById('checkoutBtn');
+ btn.addEventListener('click', (e) => {
 
 
 
@@ -2992,11 +5668,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- function addToCart(id, qty) {
+  const id = e.currentTarget.getAttribute('data-id');
 
 
 
-  const product = PRODUCTS.find(p => p.id === id);
+
+
+
+
+  const cardEl = e.currentTarget.closest('.rounded-3xl');
+
+
+
+
+
+
+
+  const qtyEl = cardEl ? cardEl.querySelector('.qty') : null;
+
+
+
+
+
+
+
+  let qty = parseInt(qtyEl && qtyEl.value ? qtyEl.value : '1', 10);
+
+
+
+
+
+
+
+  if (isNaN(qty) || qty < 1) qty = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const product = PRODUCTS.find(p => String(p.id) === String(id));
+
+
+
+
 
 
 
@@ -3008,7 +5732,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
   if (qty > product.stock) {
+
+
+
+
 
 
 
@@ -3016,10 +5752,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+  if (qtyEl) qtyEl.value = product.stock > 0 ? product.stock : 1;
+
+
+
+
+
+
+
   return;
 
 
 
+
+
+
+
   }
 
 
@@ -3028,23 +5780,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  const existing = cart.find(i => i.id === id);
 
 
 
-  if (existing) {
 
 
 
-  if (existing.qty + qty > product.stock) {
+
+
+  addToCart(product.id, qty);
 
 
 
-   alert(`لا يمكنك إضافة أكثر من ${product.stock} قطعة من ${product.title}`);
 
 
 
-   return;
+
+  showToast(`تمت إضافة ${qty} × ${product.title} إلى السلة`);
+
+
+
+
+
+
+
+  animateCart();
+
+
+
+
+
+
+
+  const cartBtn = document.getElementById("cartBtn");
+
+
+
+
+
+
+
+  if (cartBtn) {
+
+
+
+
+
+
+
+  cartBtn.classList.add("cart-animate");
+
+
+
+
+
+
+
+  setTimeout(() => cartBtn.classList.remove("cart-animate"), 400);
+
+
+
+
 
 
 
@@ -3052,27 +5848,363 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  existing.qty += qty;
 
 
 
-  } else {
+
+ });
 
 
 
-  cart.push({ id, qty });
 
 
 
-  }
+
+ });
 
 
 
-  updateCartUI(false);
+
 
 
 
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // بحث
+
+
+
+
+
+
+
+ if (searchInput) {
+
+
+
+
+
+
+
+ searchInput.addEventListener('input', (e) => {
+
+
+
+
+
+
+
+ const q = e.target.value.trim();
+
+
+
+
+
+
+
+ const filtered = PRODUCTS.filter(p => p.title.includes(q) || p.description.includes(q));
+
+
+
+
+
+
+
+ renderProducts(filtered);
+
+
+
+
+
+
+
+ });
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // === عمليات السلة ===
+
+
+
+
+
+
+
+ const cartDrawer = document.getElementById('cartDrawer');
+
+
+
+
+
+
+
+ const cartOverlay = document.getElementById('cartOverlay');
+
+
+
+
+
+
+
+ const cartBtn = document.getElementById('cartBtn');
+
+
+
+
+
+
+
+ const closeCartBtn = document.getElementById('closeCartBtn');
+
+
+
+
+
+
+
+ const cartItems = document.getElementById('cartItems');
+
+
+
+
+
+
+
+ const cartCount = document.getElementById('cartCount');
+
+
+
+
+
+
+
+ const cartTotal = document.getElementById('cartTotal');
+
+
+
+
+
+
+
+ const checkoutBtn = document.getElementById('checkoutBtn');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function addToCart(id, qty) {
+
+
+
+
+
+
+
+ const product = PRODUCTS.find(p => p.id === id);
+
+
+
+
+
+
+
+ if (!product) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ if (qty > product.stock) {
+
+
+
+
+
+
+
+ alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
+
+
+
+
+
+
+
+ return;
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const existing = cart.find(i => i.id === id);
+
+
+
+
+
+
+
+ if (existing) {
+
+
+
+
+
+
+
+ if (existing.qty + qty > product.stock) {
+
+
+
+
+
+
+
+  alert(`لا يمكنك إضافة أكثر من ${product.stock} قطعة من ${product.title}`);
+
+
+
+
+
+
+
+  return;
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+ existing.qty += qty;
+
+
+
+
+
+
+
+ } else {
+
+
+
+
+
+
+
+ cart.push({ id, qty });
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+ updateCartUI(false);
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
 
 
 
@@ -3084,15 +6216,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  cart = cart.filter(i => i.id !== id);
 
 
 
-  updateCartUI(false);
+
+ cart = cart.filter(i => i.id !== id);
+
+
+
+
+
+
+
+ updateCartUI(false);
+
+
+
+
 
 
 
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3104,27 +6256,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  const item = cart.find(i => i.id === id);
 
 
 
-  if (item) {
+
+ const item = cart.find(i => i.id === id);
 
 
 
-  item.qty = Math.max(1, qty);
 
 
 
-  updateCartUI(false);
+
+ if (item) {
 
 
 
-  }
+
+
+
+
+ item.qty = Math.max(1, qty);
+
+
+
+
+
+
+
+ updateCartUI(false);
+
+
+
+
 
 
 
  }
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
 
 
 
@@ -3136,19 +6320,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  return cart.reduce((sum, i) => {
 
 
 
-  const p = PRODUCTS.find(p => p.id === i.id);
+
+ return cart.reduce((sum, i) => {
 
 
 
-  return sum + (p.price * i.qty);
 
 
 
-  }, 0);
+
+ const p = PRODUCTS.find(p => p.id === i.id);
+
+
+
+
+
+
+
+ return sum + (p.price * i.qty);
+
+
+
+
+
+
+
+ }, 0);
+
+
+
+
 
 
 
@@ -3160,105 +6364,219 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
 function updateCartUI(open = false) {
+
+
 
  cartItems.innerHTML = '';
 
 
 
+
+
+
+
  cart.forEach(i => {
 
-  const p = PRODUCTS.find(p => p.id === i.id);
 
-  const row = document.createElement('div');
 
-  row.className = 'py-4 flex items-center gap-3';
+ const p = PRODUCTS.find(p => p.id === i.id);
 
-  row.innerHTML = `
 
-   <img src="${p.image}" class="w-16 h-12 rounded-lg object-cover ring-1 ring-white/10" alt="${p.title}">
 
-   <div class="flex-1">
+ const row = document.createElement('div');
 
-    <p class="font-medium">${p.title}</p>
 
-    <p class="text-slate-300 text-sm">${p.price.toFixed(2)} ${CURRENCY}</p>
 
-   </div>
+ row.className = 'py-4 flex items-center gap-3';
 
-   <div class="flex items-center gap-2">
 
-    <input type="number" min="1" max="${p.stock}" value="${i.qty}" 
 
-     class="itemQty w-20 px-2 py-1 rounded-lg bg-white/10 ring-1 ring-white/10" data-id="${i.id}">
+ row.innerHTML = `
 
-    <button class="removeItem text-red-300 hover:text-red-400" data-id="${i.id}">حذف</button>
 
-   </div>
 
-  `;
+  <img src="${p.image}" class="w-16 h-12 rounded-lg object-cover ring-1 ring-white/10" alt="${p.title}">
 
-  cartItems.appendChild(row);
+
+
+  <div class="flex-1">
+
+
+
+  <p class="font-medium">${p.title}</p>
+
+
+
+  <p class="text-slate-300 text-sm">${p.price.toFixed(2)} ${CURRENCY}</p>
+
+
+
+  </div>
+
+
+
+  <div class="flex items-center gap-2">
+
+
+
+  <input type="number" min="1" max="${p.stock}" value="${i.qty}" 
+
+
+
+   class="itemQty w-20 px-2 py-1 rounded-lg bg-white/10 ring-1 ring-white/10" data-id="${i.id}">
+
+
+
+  <button class="removeItem text-red-300 hover:text-red-400" data-id="${i.id}">حذف</button>
+
+
+
+  </div>
+
+
+
+ `;
+
+
+
+ cartItems.appendChild(row);
+
+
 
  });
+
+
+
+
 
 
 
  // --- ✅ تحقق الكمية في السلة (بالأسهم أو الكيبورد) ---
 
+
+
  cartItems.querySelectorAll('.itemQty').forEach(inp => {
 
-  inp.addEventListener('input', e => {
 
-   const id = e.target.getAttribute('data-id');
 
-   const product = PRODUCTS.find(p => p.id === id);
-
-   let val = parseInt(e.target.value, 10);
+ inp.addEventListener('input', e => {
 
 
 
-   if (isNaN(val) || val < 1) {
+  const id = e.target.getAttribute('data-id');
 
-    e.target.value = 1;
 
-    val = 1;
 
-   }
+  const product = PRODUCTS.find(p => p.id === id);
 
-   if (val > product.stock) {
 
-    alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
 
-    e.target.value = product.stock;
+  let val = parseInt(e.target.value, 10);
 
-    val = product.stock;
 
-   }
 
-   updateQty(id, val);
 
-  });
+
+
+
+  if (isNaN(val) || val < 1) {
+
+
+
+  e.target.value = 1;
+
+
+
+  val = 1;
+
+
+
+  }
+
+
+
+  if (val > product.stock) {
+
+
+
+  alert(`المتوفر فقط ${product.stock} قطعة من ${product.title}`);
+
+
+
+  e.target.value = product.stock;
+
+
+
+  val = product.stock;
+
+
+
+  }
+
+
+
+  updateQty(id, val);
+
+
 
  });
+
+
+
+ });
+
+
+
+
 
 
 
  cartItems.querySelectorAll('.removeItem').forEach(btn => {
 
-  btn.addEventListener('click', e => removeFromCart(e.target.getAttribute('data-id')));
+
+
+ btn.addEventListener('click', e => removeFromCart(e.target.getAttribute('data-id')));
+
+
 
  });
 
 
 
+
+
+
+
  const count = cart.reduce((s,i)=>s+i.qty,0);
+
+
 
  cartCount.textContent = count;
 
+
+
  cartTotal.textContent = `${calcTotal().toFixed(2)} ${CURRENCY}`;
 
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -3270,15 +6588,31 @@ function updateCartUI(open = false) {
 
 
 
-  cartDrawer.classList.remove('hidden');
 
 
 
-  document.body.style.overflow = 'hidden';
+
+ cartDrawer.classList.remove('hidden');
+
+
+
+
+
+
+
+ document.body.style.overflow = 'hidden';
+
+
+
+
 
 
 
  }
+
+
+
+
 
 
 
@@ -3286,15 +6620,35 @@ function updateCartUI(open = false) {
 
 
 
-  cartDrawer.classList.add('hidden');
 
 
 
-  document.body.style.overflow = '';
+
+ cartDrawer.classList.add('hidden');
+
+
+
+
+
+
+
+ document.body.style.overflow = '';
+
+
+
+
 
 
 
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3306,7 +6660,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  cartOverlay.addEventListener('click', closeCart);
+
+
+
+
 
 
 
@@ -3318,7 +6680,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
  // === واتساب Checkout ===
+
+
+
+
 
 
 
@@ -3326,11 +6700,23 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  const closeCheckoutBtn = document.getElementById('closeCheckoutBtn');
 
 
 
+
+
+
+
  const cancelCheckoutBtn = document.getElementById('cancelCheckoutBtn');
+
+
+
+
 
 
 
@@ -3342,7 +6728,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
  function openCheckout() { checkoutModal.classList.remove('hidden'); }
+
+
+
+
 
 
 
@@ -3354,7 +6752,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
  closeCheckoutBtn.addEventListener('click', closeCheckout);
+
+
+
+
 
 
 
@@ -3366,31 +6776,71 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
  checkoutBtn.addEventListener('click', () => {
 
 
 
-  if (cart.length === 0) {
 
 
 
-  openCart();
+
+ if (cart.length === 0) {
 
 
 
-  return;
 
 
 
-  }
+
+ openCart();
 
 
 
-  openCheckout();
+
+
+
+
+ return;
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+ openCheckout();
+
+
+
+
 
 
 
  });
+
+
+
+
+
+
+
+
 
 
 
@@ -3402,7 +6852,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  try {
+
+
+
+
 
 
 
@@ -3410,19 +6868,43 @@ function updateCartUI(open = false) {
 
 
 
-  method: "POST",
 
 
 
-  headers: { "Content-Type": "application/json" },
+
+ method: "POST",
 
 
 
-  body: JSON.stringify({ id: productId, qty: qty })
+
+
+
+
+ headers: { "Content-Type": "application/json" },
+
+
+
+
+
+
+
+ body: JSON.stringify({ id: productId, qty: qty })
+
+
+
+
 
 
 
  });
+
+
+
+
+
+
+
+
 
 
 
@@ -3434,7 +6916,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  console.log("✅ API Response:", data);
+
+
+
+
+
+
+
+
 
 
 
@@ -3446,7 +6940,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  console.log(`✅ تم تحديث المخزون: المنتج ${data.id} أصبح ${data.newStock}`);
+
+
+
+
 
 
 
@@ -3454,11 +6956,23 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  console.warn("⚠️ فشل تحديث المخزون:", data.message);
 
 
 
+
+
+
+
  }
+
+
+
+
 
 
 
@@ -3466,7 +6980,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  console.error("❌ خطأ في استدعاء API:", err);
+
+
+
+
 
 
 
@@ -3474,7 +6996,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -3486,43 +7020,91 @@ function updateCartUI(open = false) {
 
 
 
-  const container = document.getElementById('toast-container');
 
 
 
-  const toast = document.createElement('div');
+
+ const container = document.getElementById('toast-container');
 
 
 
-  toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
 
 
 
-  toast.innerHTML = `✅ ${message}`;
+
+ const toast = document.createElement('div');
 
 
 
-  container.appendChild(toast);
 
 
 
-  setTimeout(() => {
+
+ toast.className = "px-4 py-2 rounded-xl bg-green-600 text-white shadow-lg animate-fadeIn";
 
 
 
-  toast.classList.add("opacity-0", "transition-opacity");
 
 
 
-  setTimeout(() => toast.remove(), 500);
+
+ toast.innerHTML = `✅ ${message}`;
 
 
 
-  }, 3000);
+
+
+
+
+ container.appendChild(toast);
+
+
+
+
+
+
+
+ setTimeout(() => {
+
+
+
+
+
+
+
+ toast.classList.add("opacity-0", "transition-opacity");
+
+
+
+
+
+
+
+ setTimeout(() => toast.remove(), 500);
+
+
+
+
+
+
+
+ }, 3000);
+
+
+
+
 
 
 
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3534,27 +7116,11 @@ function updateCartUI(open = false) {
 
 
 
-  const name = document.getElementById('customerName').value.trim();
 
 
 
-  const phone = document.getElementById('customerPhone').value.trim();
 
-
-
-  const regionSelect = document.getElementById('customerRegion');
-
-
-
-  const region = regionSelect.options[regionSelect.selectedIndex].value;
-
-
-
-  const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].dataset.fee || 0);
-
-
-
-  const notes = document.getElementById('customerNotes').value.trim();
+ const name = document.getElementById('customerName').value.trim();
 
 
 
@@ -3562,19 +7128,7 @@ function updateCartUI(open = false) {
 
 
 
-  const orderLines = cart.map(i => {
-
-
-
-  const p = PRODUCTS.find(p => p.id === i.id);
-
-
-
-  return `• ${p.title} × ${i.qty} = ${(p.price * i.qty).toFixed(2)} ${CURRENCY}`;
-
-
-
-  }).join('\n');
+ const phone = document.getElementById('customerPhone').value.trim();
 
 
 
@@ -3582,11 +7136,7 @@ function updateCartUI(open = false) {
 
 
 
-  const subtotal = calcTotal();
-
-
-
-  const finalTotal = (subtotal + deliveryFee).toFixed(2);
+ const regionSelect = document.getElementById('customerRegion');
 
 
 
@@ -3594,7 +7144,117 @@ function updateCartUI(open = false) {
 
 
 
-  const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
+ const region = regionSelect.options[regionSelect.selectedIndex].value;
+
+
+
+
+
+
+
+ const deliveryFee = parseFloat(regionSelect.options[regionSelect.selectedIndex].dataset.fee || 0);
+
+
+
+
+
+
+
+ const notes = document.getElementById('customerNotes').value.trim();
+
+
+
+ // ✅ طريقة الدفع
+
+ const paymentMethodSelect = document.getElementById('paymentMethod');
+
+ const paymentMethod = paymentMethodSelect ? paymentMethodSelect.options[paymentMethodSelect.selectedIndex].text : '';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const orderLines = cart.map(i => {
+
+
+
+
+
+
+
+ const p = PRODUCTS.find(p => p.id === i.id);
+
+
+
+
+
+
+
+ return `• ${p.title} × ${i.qty} = ${(p.price * i.qty).toFixed(2)} ${CURRENCY}`;
+
+
+
+
+
+
+
+ }).join('\n');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const subtotal = calcTotal();
+
+
+
+
+
+
+
+ const finalTotal = (subtotal + deliveryFee).toFixed(2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ const msg = `طلب جديد من الموقع:%0A%0A${orderLines}
+
+
+
+
 
 
 
@@ -3602,7 +7262,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
 %0A--------------------------------
+
+
+
+
 
 
 
@@ -3610,11 +7278,27 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
 %0A%0Aالاسم: ${name}
 
 
 
+
+
+
+
 %0Aالهاتف: ${phone}
+
+
+
+
+
+
+
+%0Aطريقة الدفع: ${paymentMethod}
 
 
 
@@ -3626,11 +7310,6 @@ function updateCartUI(open = false) {
 
 
 
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-
-
-
-  window.open(waUrl, '_blank');
 
 
 
@@ -3638,47 +7317,8 @@ function updateCartUI(open = false) {
 
 
 
-  // خصم محلي + تحديث Google Sheets
 
-
-
-  const itemsToUpdate = cart.map(c => ({...c})); // نسخة
-
-
-
-  cart.forEach(item => {
-
-
-
-  const product = PRODUCTS.find(p => p.id === item.id);
-
-
-
-  if (product) product.stock -= item.qty;
-
-
-
-  });
-
-
-
-  cart = [];
-
-
-
-  updateCartUI(false);
-
-
-
-  renderProducts(PRODUCTS);
-
-
-
-  closeCheckout();
-
-
-
-  closeCart();
+ const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
 
 
 
@@ -3686,27 +7326,59 @@ function updateCartUI(open = false) {
 
 
 
-  // إرسال تحديثات المخزون إلى Google Sheets
+ window.open(waUrl, '_blank');
 
 
 
-  console.log("itemsToUpdate =", itemsToUpdate);
 
 
 
-  for (let item of itemsToUpdate) {
 
 
 
- await updateSheetStock(item.id, item.qty);
 
 
 
-}
 
 
 
-  showToast('تم إرسال الطلب وتحديث المخزون');
+ // خصم محلي + تحديث Google Sheets
+
+
+
+
+
+
+
+ const itemsToUpdate = cart.map(c => ({...c})); // نسخة
+
+
+
+
+
+
+
+ cart.forEach(item => {
+
+
+
+
+
+
+
+ const product = PRODUCTS.find(p => p.id === item.id);
+
+
+
+
+
+
+
+ if (product) product.stock -= item.qty;
+
+
+
+
 
 
 
@@ -3718,7 +7390,123 @@ function updateCartUI(open = false) {
 
 
 
+ cart = [];
+
+
+
+
+
+
+
+ updateCartUI(false);
+
+
+
+
+
+
+
+ renderProducts(PRODUCTS);
+
+
+
+
+
+
+
+ closeCheckout();
+
+
+
+
+
+
+
+ closeCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // إرسال تحديثات المخزون إلى Google Sheets
+
+
+
+
+
+
+
+ console.log("itemsToUpdate =", itemsToUpdate);
+
+
+
+
+
+
+
+ for (let item of itemsToUpdate) {
+
+
+
+
+
+
+
+ await updateSheetStock(item.id, item.qty);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ showToast('تم إرسال الطلب وتحديث المخزون');
+
+
+
+
+
+
+
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
+
+
+
 
 
 
@@ -3726,7 +7514,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
 <script>
+
+
+
+
 
 
 
@@ -3734,7 +7530,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  const nameInput = document.getElementById("customerName");
+
+
+
+
 
 
 
@@ -3742,7 +7546,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  const regionInput = document.getElementById("customerRegion");
+
+
+
+
 
 
 
@@ -3754,7 +7566,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
  function clearErrors(){
+
+
+
+
 
 
 
@@ -3762,11 +7586,27 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  [nameInput, phoneInput, regionInput].forEach(inp => inp && inp.classList.remove("input-error","shake-once"));
 
 
 
+
+
+
+
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3778,7 +7618,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  if(!input) return;
+
+
+
+
 
 
 
@@ -3786,7 +7634,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  err.className = "error-msg __inline";
+
+
+
+
 
 
 
@@ -3794,7 +7650,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  // place after input
+
+
+
+
 
 
 
@@ -3802,7 +7666,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  input.classList.add("input-error","shake-once");
+
+
+
+
 
 
 
@@ -3810,7 +7682,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3822,7 +7706,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  clearErrors();
+
+
+
+
 
 
 
@@ -3830,7 +7722,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  // name
+
+
+
+
 
 
 
@@ -3838,15 +7738,31 @@ function updateCartUI(open = false) {
 
 
 
-  placeError(nameInput, "الاسم مطلوب");
 
 
 
-  ok = false;
+
+ placeError(nameInput, "الاسم مطلوب");
+
+
+
+
+
+
+
+ ok = false;
+
+
+
+
 
 
 
  }
+
+
+
+
 
 
 
@@ -3854,19 +7770,39 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  if(!phoneInput || !/^\d{10}$/.test(phoneInput.value.trim())){
 
 
 
-  placeError(phoneInput, "رقم الهاتف يجب أن يكون 10 أرقام");
 
 
 
-  ok = false;
+
+ placeError(phoneInput, "رقم الهاتف يجب أن يكون 10 أرقام");
+
+
+
+
+
+
+
+ ok = false;
+
+
+
+
 
 
 
  }
+
+
+
+
 
 
 
@@ -3874,19 +7810,39 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  if(!regionInput || !regionInput.value){
 
 
 
-  placeError(regionInput, "الرجاء اختيار المنطقة");
 
 
 
-  ok = false;
+
+ placeError(regionInput, "الرجاء اختيار المنطقة");
+
+
+
+
+
+
+
+ ok = false;
+
+
+
+
 
 
 
  }
+
+
+
+
 
 
 
@@ -3894,7 +7850,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3906,7 +7874,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  [nameInput, phoneInput, regionInput].forEach(inp => {
+
+
+
+
 
 
 
@@ -3914,23 +7890,47 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  inp.addEventListener('input', ()=>{
 
 
 
-  if(inp.classList.contains('input-error')){
 
 
 
-  clearErrors();
+
+ if(inp.classList.contains('input-error')){
 
 
 
-  }
+
+
+
+
+ clearErrors();
+
+
+
+
+
+
+
+ }
+
+
+
+
 
 
 
  });
+
+
+
+
 
 
 
@@ -3938,15 +7938,31 @@ function updateCartUI(open = false) {
 
 
 
-  if(inp.classList.contains('input-error')){
 
 
 
-  clearErrors();
+
+ if(inp.classList.contains('input-error')){
 
 
 
-  }
+
+
+
+
+ clearErrors();
+
+
+
+
+
+
+
+ }
+
+
+
+
 
 
 
@@ -3954,7 +7970,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  });
+
+
+
+
+
+
+
+
 
 
 
@@ -3966,7 +7994,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  if(phoneInput){
+
+
+
+
 
 
 
@@ -3974,7 +8010,15 @@ function updateCartUI(open = false) {
 
 
 
-  phoneInput.value = phoneInput.value.replace(/[^\d]/g, '').slice(0,10);
+
+
+
+
+ phoneInput.value = phoneInput.value.replace(/[^\d]/g, '').slice(0,10);
+
+
+
+
 
 
 
@@ -3982,7 +8026,19 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -3994,7 +8050,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  if(confirmBtn){
+
+
+
+
 
 
 
@@ -4002,31 +8066,63 @@ function updateCartUI(open = false) {
 
 
 
-  const ok = validate();
 
 
 
-  if(!ok){
+
+ const ok = validate();
 
 
 
-  e.preventDefault();
 
 
 
-  e.stopPropagation();
+
+ if(!ok){
 
 
 
-  if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
 
 
 
-  return false;
+
+ e.preventDefault();
 
 
 
-  }
+
+
+
+
+ e.stopPropagation();
+
+
+
+
+
+
+
+ if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+
+
+
+
+
+
+
+ return false;
+
+
+
+
+
+
+
+ }
+
+
+
+
 
 
 
@@ -4034,7 +8130,15 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
  }
+
+
+
+
 
 
 
@@ -4046,11 +8150,27 @@ function updateCartUI(open = false) {
 
 
 
+
+
+
+
+
+
+
+
 // تحميل المنتجات عند فتح الصفحة
 
 
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', loadProducts);
+
+
+
+
 
 
 
@@ -4062,7 +8182,19 @@ document.addEventListener('DOMContentLoaded', loadProducts);
 
 
 
+
+
+
+
+
+
+
+
 <script>
+
+
+
+
 
 
 
@@ -4070,7 +8202,15 @@ document.addEventListener('DOMContentLoaded', loadProducts);
 
 
 
+
+
+
+
 function fixCartStock() {
+
+
+
+
 
 
 
@@ -4078,7 +8218,15 @@ function fixCartStock() {
 
 
 
+
+
+
+
  const id = inp.getAttribute("data-id");
+
+
+
+
 
 
 
@@ -4086,47 +8234,79 @@ function fixCartStock() {
 
 
 
-  const product = PRODUCTS.find(p => p.id === id);
 
 
 
-  if (product) {
+
+ const product = PRODUCTS.find(p => p.id === id);
 
 
 
-  inp.setAttribute("max", product.stock);
 
 
 
-  // لو ما في نص "المتوفر" ضيفه
+
+ if (product) {
 
 
 
-  if (!inp.parentElement.parentElement.querySelector(".stockInfo")) {
 
 
 
-   const stockInfo = document.createElement("p");
+
+ inp.setAttribute("max", product.stock);
 
 
 
-   stockInfo.className = "stockInfo text-xs text-slate-400 mt-1";
 
 
 
-   stockInfo.innerText = `المتوفر: ${product.stock}`;
+
+ // لو ما في نص "المتوفر" ضيفه
 
 
 
-   inp.parentElement.parentElement.querySelector(".flex-1").appendChild(stockInfo);
 
 
 
-  }
+
+ if (!inp.parentElement.parentElement.querySelector(".stockInfo")) {
 
 
 
-  }
+
+
+
+
+  const stockInfo = document.createElement("p");
+
+
+
+
+
+
+
+  stockInfo.className = "stockInfo text-xs text-slate-400 mt-1";
+
+
+
+
+
+
+
+  stockInfo.innerText = `المتوفر: ${product.stock}`;
+
+
+
+
+
+
+
+  inp.parentElement.parentElement.querySelector(".flex-1").appendChild(stockInfo);
+
+
+
+
 
 
 
@@ -4134,7 +8314,31 @@ function fixCartStock() {
 
 
 
+
+
+
+
+ }
+
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
  });
+
+
+
+
 
 
 
@@ -4146,7 +8350,19 @@ function fixCartStock() {
 
 
 
+
+
+
+
+
+
+
+
 // نحفظ نسخة من الدالة الأصلية
+
+
+
+
 
 
 
@@ -4154,7 +8370,15 @@ const oldUpdateCartUI = updateCartUI;
 
 
 
+
+
+
+
 updateCartUI = function(open = false) {
+
+
+
+
 
 
 
@@ -4162,7 +8386,15 @@ updateCartUI = function(open = false) {
 
 
 
+
+
+
+
  fixCartStock();
+
+
+
+
 
 
 
@@ -4170,7 +8402,17 @@ updateCartUI = function(open = false) {
 
 
 
+
+
+
+
 </script>
+
+
+
+
+
+
 
 
 
@@ -4178,57 +8420,113 @@ updateCartUI = function(open = false) {
 
 <script>
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
+
+
 
  var menuToggle = document.getElementById('menuToggle');
 
+
+
  var mobileMenu = document.getElementById('mobileMenu');
+
+
 
  if (menuToggle && mobileMenu) {
 
-  menuToggle.addEventListener('click', function() {
 
-   var isHidden = mobileMenu.classList.contains('hidden');
 
-   if (isHidden) {
+ menuToggle.addEventListener('click', function() {
 
-    mobileMenu.classList.remove('hidden');
 
-    menuToggle.setAttribute('aria-expanded', 'true');
 
-   } else {
+  var isHidden = mobileMenu.classList.contains('hidden');
 
-    mobileMenu.classList.add('hidden');
 
-    menuToggle.setAttribute('aria-expanded', 'false');
 
-   }
+  if (isHidden) {
+
+
+
+  mobileMenu.classList.remove('hidden');
+
+
+
+  menuToggle.setAttribute('aria-expanded', 'true');
+
+
+
+  } else {
+
+
+
+  mobileMenu.classList.add('hidden');
+
+
+
+  menuToggle.setAttribute('aria-expanded', 'false');
+
+
+
+  }
+
+
+
+ });
+
+
+
+ // Close mobile menu when a link is clicked
+
+
+
+ mobileMenu.querySelectorAll('a').forEach(function(a) {
+
+
+
+  a.addEventListener('click', function() {
+
+
+
+  mobileMenu.classList.add('hidden');
+
+
+
+  menuToggle.setAttribute('aria-expanded', 'false');
+
+
 
   });
 
-  // Close mobile menu when a link is clicked
 
-  mobileMenu.querySelectorAll('a').forEach(function(a) {
 
-   a.addEventListener('click', function() {
+ });
 
-    mobileMenu.classList.add('hidden');
 
-    menuToggle.setAttribute('aria-expanded', 'false');
-
-   });
-
-  });
 
  }
 
+
+
 });
+
+
 
 </script>
 
 
 
+
+
+
+
 </body>
+
+
+
+
 
 
 
