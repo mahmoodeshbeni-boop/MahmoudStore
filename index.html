@@ -5297,6 +5297,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  discount: Number(p.discount) || null,
+
+
 
 
 
@@ -5332,7 +5335,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- console.error('فشل جلب المنتجات من Google Sheets:', err);
+ console.error('فشل جلب المنتجات, اعد تحميل الصفحة', err);
 
 
 
@@ -5340,7 +5343,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">تعذر تحميل المنتجات من Google Sheets</div>';
+ grid.innerHTML = '<div class="col-span-full p-6 rounded-2xl bg-red-500/10 ring-1 ring-red-500/30 text-red-200">فشل جلب المنتجات, اعد تحميل الصفحة</div>';
 
 
 
@@ -5508,7 +5511,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>
+${prod.discount && prod.discount < prod.price 
+  ? `
+     <div class="flex flex-col text-center">
+       <span class="text-green-400 text-xl font-bold">${prod.discount.toFixed(2)} ${CURRENCY}</span>
+       <span class="line-through text-slate-400 text-sm">${prod.price.toFixed(2)} ${CURRENCY}</span>
+     </div>
+    `
+  : `<span class="text-xl font-bold">${prod.price.toFixed(2)} ${CURRENCY}</span>`
+}
+
 
 
 
@@ -6340,7 +6352,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- return sum + (p.price * i.qty);
+const realPrice = p.discount && p.discount < p.price ? p.discount : p.price;
+return sum + (realPrice * i.qty);
+
 
 
 
@@ -6416,7 +6430,14 @@ function updateCartUI(open = false) {
 
 
 
-  <p class="text-slate-300 text-sm">${p.price.toFixed(2)} ${CURRENCY}</p>
+${p.discount && p.discount < p.price 
+  ? `
+      <p class="text-green-400">${p.discount.toFixed(2)} ${CURRENCY}</p>
+      <p class="line-through text-slate-400 text-xs">${p.price.toFixed(2)} ${CURRENCY}</p>
+    `
+  : `<p class="text-slate-300 text-sm">${p.price.toFixed(2)} ${CURRENCY}</p>`
+}
+
 
 
 
@@ -7201,8 +7222,9 @@ function updateCartUI(open = false) {
 
 
 
+const unitPrice = (p.discount && p.discount < p.price) ? p.discount : p.price;
+return `• ${p.title} × ${i.qty} = ${(unitPrice * i.qty).toFixed(2)} ${CURRENCY}`;
 
- return `• ${p.title} × ${i.qty} = ${(p.price * i.qty).toFixed(2)} ${CURRENCY}`;
 
 
 
